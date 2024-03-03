@@ -109,4 +109,39 @@ $$
 ab \bmod m = ((a \bmod m)(b \bmod m)) \bmod m.
 $$
 
+## 4.3 Primes and Greatest Common Divisors
 
+### Definition 1 - Prime and Composite
+
+An integer $p$ greater than $1$ is called **prime** is the only positive factors of $p$ are $1$ and $p$. A positive integer that is greater that $1$ and is not prime is called **composite**.
+
+### Theorem - The Fundamental Theorem of Arithmetic
+
+Every integer greater than $1$ can be written uniquely as a prime or as the product of two or more primes, where the prime factors are written in order of nondecreasing size.
+
+**Example:**
+
+1. $100 = 2 \cdot 2 \cdot 5 \cdot 5 = 2^{2}5^{2}$
+2. $641 = 641$
+
+### Theorem 2 - Composite Integer
+
+If $n$ is a [[#Definition 1 - Prime and Composite|composite integer]], then $n$ has a prime divisor less than or equal to $\sqrt{n}$.
+
+#### The Sieve of Eratosthenes
+
+This is used to find all primes not exceeding a specified positive integer. It does so by iteratively marking as **composite** the multiples of each prime, starting with the first prime number, 2. Once all the multiples of each discovered prime have been marked as composites, the remaining unmarked numbers are primes. (from [Wikipedia](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes))
+
+### Theorem 3 - Infinite Primes
+
+There are infinitely many primes.
+
+**Proof:** (by [[1 The Foundations - Logic and Proofs#Proofs by Contradiction| Contradiction]])
+
+Assume that there are only finitely many primes, $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$. Let
+
+$$
+Q = p_{1} p_{2} p_{3} \cdots p_{n} + 1
+$$
+
+By the [[#Theorem - The Fundamental Theorem of Arithmetic|fundamental theorem of arithmetic]], $Q$ is prime or else it can be written as the product of two or more primes. However, none of the primes $p_j$ divides $Q$
