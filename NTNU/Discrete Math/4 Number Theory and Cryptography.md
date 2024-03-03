@@ -132,7 +132,7 @@ If $n$ is a [[#Definition 1 - Prime and Composite|composite integer]], then $n$ 
 
 This is used to find all primes not exceeding a specified positive integer. It does so by iteratively marking as **composite** the multiples of each prime, starting with the first prime number, 2. Once all the multiples of each discovered prime have been marked as composites, the remaining unmarked numbers are primes. (from [Wikipedia](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes))
 
-### Theorem 3 - Infinite Primes
+### Theorem 3 - Euclid's Theorem
 
 There are infinitely many primes.
 
@@ -141,7 +141,11 @@ There are infinitely many primes.
 Assume that there are only finitely many primes, $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$. Let
 
 $$
-Q = p_{1} p_{2} p_{3} \cdots p_{n} + 1
+P = p_{1} p_{2} p_{3} \cdots p_{n} \quad \text{ and } \quad
+Q = P + 1
 $$
 
-By the [[#Theorem - The Fundamental Theorem of Arithmetic|fundamental theorem of arithmetic]], $Q$ is prime or else it can be written as the product of two or more primes. However, none of the primes $p_j$ divides $Q$
+By the [[#Theorem - The Fundamental Theorem of Arithmetic|fundamental theorem of arithmetic]], $Q$ is prime or else it can be written as the product of two or more primes.
+
+- If $Q$ is prime, then there is at lease one or more prime that is not in the list $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$, namely, $Q$ itself.
+- If $Q$ is not prime, then there exists $p_{j}$ is a prime factor of $Q. $p_j$ can't be any of 
