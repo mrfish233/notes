@@ -22,6 +22,24 @@ $$
 \end{align}
 $$
 
+**Proof:**
+
+$\text{(i)}$ Suppose that $a \mid b$ and $a \mid c$, then there are integers $s$ and $t$ with $b = as$ and $c = at$. Hence,
+
+$$
+b + c = as + at = a(s + t)
+$$
+
+Therefore $a$ divides $b + c$.
+
+$\text{(iii)}$ Suppose that $a \mid b$ and $b \mid c$, then there are integers $s$ and $t$ with $b = as$ and $c = bt$. Hence,
+
+$$
+c = bt = (as)t = a(st).
+$$
+
+Therefore $a$ divides $c$.
+
 ### Theorem 2 - The Division Algorithm
 
 Let $a$ be an integer and $d$ a positive integer. Then there are unique integers $q, r$ with $0 \le r < d$, such that
@@ -200,4 +218,28 @@ $$
 ab = \gcd (a,b) \cdot \text{lcm} (a,b)
 $$
 
+### Lemma 1
 
+Let $a = bq + r$, where $a, b, q, r$ are integers. Then
+
+$$
+\gcd (a,b) = \gcd (b,r)
+$$
+
+**Proof:**
+
+If we can show that **all** the common divisors of $a$ and $b$ are the same as the common divisors of $b$ and $r$, we will have shown that $\gcd (a,b) = \gcd (b,r)$.
+
+Suppose integer $d$ divides both $a$ and $b$, denoted by $d \mid a$ and $d \mid b$. Then it follows that $d$ also divides $a - bq = r$ (from [[#Theorem 1]]). Hence, any common divisor of $a$ and $b$ is also a common divisor of $b$ and $r$.
+
+Suppose $d$ divides both $b$ and $r$. Then $d$ also divides $bq + r = a$. Hence, any common divisor of $b$ and $r$ is also a common divisor of $a$ and $b$.
+
+Consequently, $\gcd (a,b) = \gcd (b,r)$.
+
+### Theorem 6 - Bézout's Theorem
+
+If $a$ and $b$ are positive integers, then there exist integers $s$ and $t$ such that
+
+$$
+\gcd (a,b) = sa + tb.
+$$
