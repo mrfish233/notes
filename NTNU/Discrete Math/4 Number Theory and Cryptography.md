@@ -241,5 +241,17 @@ Consequently, $\gcd (a,b) = \gcd (b,r)$.
 If $a$ and $b$ are positive integers, then there exist integers $s$ and $t$ such that
 
 $$
-\gcd (a,b) = sa + tb.
+\gcd (a,b) = as + bt.
 $$
+
+**Proof:**
+
+(Well-ordering Property: every nonempty set of nonnegative integers has a smallest element. This property is used in this proof.)
+
+Let $S$ be a set of positive integers of the form $as + bt$, where $s, t$ are integers:
+
+$$
+S = \{as + bt \mid s,t \in \mathbb{Z}, as + bt > 0 \}
+$$
+
+As $a,b > 0$, 
