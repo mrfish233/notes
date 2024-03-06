@@ -230,28 +230,79 @@ $$
 
 If we can show that **all** the common divisors of $a$ and $b$ are the same as the common divisors of $b$ and $r$, we will have shown that $\gcd (a,b) = \gcd (b,r)$.
 
-Suppose integer $d$ divides both $a$ and $b$, denoted by $d \mid a$ and $d \mid b$. Then it follows that $d$ also divides $a - bq = r$ (from [[#Theorem 1]]). Hence, any common divisor of $a$ and $b$ is also a common divisor of $b$ and $r$.
+Suppose integer $d$ divides both $a$ and $b$, or $d \mid a$ and $d \mid b$. Then it follows that $d$ also divides $a - bq = r$ (from [[#Theorem 1]]). Hence, any common divisor of $a$ and $b$ is also a common divisor of $b$ and $r$.
 
 Suppose $d$ divides both $b$ and $r$. Then $d$ also divides $bq + r = a$. Hence, any common divisor of $b$ and $r$ is also a common divisor of $a$ and $b$.
 
-Consequently, $\gcd (a,b) = \gcd (b,r)$.
+Consequently,
 
-### Theorem 6 - Bézout's Theorem
+$$\gcd (a,b) = \gcd (b,r).$$
 
-If $a$ and $b$ are positive integers, then there exist integers $s$ and $t$ such that
+### Theorem 6 - Bézout's Identity
+
+If $a$ and $b$ are positive integers, then there exist integers $x$ and $y$ such that
 
 $$
-\gcd (a,b) = as + bt.
+\gcd (a,b) = ax + by.
 $$
 
 **Proof:**
 
-(Well-ordering Property: every nonempty set of nonnegative integers has a smallest element. This property is used in this proof.)
+(Well-ordering Principle: every nonempty set of nonnegative integers has a smallest element. This property is used in this proof.)
 
-Let $S$ be a set of positive integers of the form $as + bt$, where $s, t$ are integers:
+Let $S$ be a set of positive integers of the form $ax + by$, where $x, y$ are integers:
 
 $$
-S = \{as + bt \mid s,t \in \mathbb{Z}, as + bt > 0 \}
+S = \{ax + by \mid x,y \in \mathbb{Z}, ax + by > 0 \}
 $$
 
-As $a,b > 0$, 
+The set is **nonempty** since it contains either $a$ or $-a$ with $x = \pm 1$ and $y = 0$. Since $S$ is nonempty set of positive integers, by **well-ordering principle**, there exists a smallest element $d_0$ such that
+
+$$
+d_{0} = ax_{0} + by_{0}, \quad x_{0}, y_{0} \in \mathbb{Z}.
+$$
+
+We can now prove the theorem by proving $\gcd (a,b) = d_{0}$. To prove $d_{0}$ is greatest common divisor of $a$ and $b$, we must prove that
+
+1. $d_0$ is common divisor of $a$ and $b$, or $d_{0} \mid a$ and $d_{0} \mid b$.
+2. For any other common divisor $c$, one has $c \le d_{0}$, or
+
+$$
+\forall c \ (c \mid a) \land (c \mid b) \implies c \mid d_{0}
+$$
+
+First, let $a = kd_{0} + r, k \in \mathbb{Z}, 0 \le r < d_{0}$ (by [[#Theorem 2 - The Division Algorithm|The Division Algorithm]]). Then
+
+$$
+\begin{align}
+r &= a - kd_{0} \\
+&= a - k(ax_{0} + by_{0}) \\
+&= a(1 - kx_{0}) + b(ky_{0}).
+\end{align}
+$$
+
+If $r \ne 0$, then $r \in S$ since $r$ is in the form of $ax + by$. This *contradicts* with our assumption of $d_{0}$ is the smallest element in $S$. Therefore $r = 0$ and
+
+$$
+a = kd_{0}+ r = kd_0
+$$
+
+which shows that $d_{0} \mid a$ (by definition of [[#Definition 1 - Division|division]]). Similarly $d_{0}$ is also a divisor of $b$ and therefore $d_{0} \mid a$ and $d_{0} \mid b$.
+
+Next, let $c$ be a common divisor of $a$ and $b$, that is, there exist $k_{1}$ and $k_{2}$ such that $a = ck_{1}$ and $b = ck_{2}$. Then
+
+$$
+\begin{align}
+d_{0} &= ax_{0} + by_{0} \\
+&= (ck_{1})x_{0} + (ck_{2})y_{0} \\
+&= c(k_{1}x_{0} + x_{2}y_{0}).
+\end{align}
+$$
+
+This shows that $c \mid d_{0}$ and therefore complete our proofs.
+
+#### Lemma 2
+
+If $a, b, c$ are positive integers such that $\gcd (a,b) = 1$ and $a \mid bc$, then $a \mid c$.
+
+
