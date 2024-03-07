@@ -465,7 +465,7 @@ in which the **center** $a$ and the **coefficients** $c_{0}, c_{1}, c_{2}, \cdot
 The power series
 
 $$
-1 - \frac{1}{2} (x-2) + \frac{1}{4} (x-2)^{2} + \cdots + \left(-\frac{1}{2}\right) (x-2)^{n} + \cdots
+1 - \frac{1}{2} (x-2) + \frac{1}{4} (x-2)^{2} + \cdots + \left(-\frac{1}{2}\right)^{n-1} (x-2)^{n} + \cdots
 $$
 
 has first term $1$ and ratio $r = \displaystyle-\frac{x-2}{2}$. The series converges for
@@ -502,8 +502,10 @@ converges at $x = c \ne 0$, then it **converges absolutely** for all $x$ with $|
 The convergence of the series $\sum\limits c_{n}(x-a)^{n}$ is described by one of the following 3 cases.
 
 1. There is a positive number $R$ such that the series diverges for $x$ with $|x-a| > R$ but **converges absolutely** for $x$ with $|x-a| < R$. The series may or may not converge at either of the endpoints $x = a-R$ and $x = a + R$.
-2. The series **converges absolutely** for every $x (R = \infty)$.
+2. The series **converges absolutely** for every $x \ (R = \infty)$.
 3. The series **converges** at $x = a$ and **diverges** elsewhere $(R = 0)$.
+
+$R$ is called the **radius of convergence** of the power series, and the interval or radius $R$ centered at $x=a$ is called the **interval of convergence**.
 
 - [ ] proof of Corollary of Theorem 18
 
