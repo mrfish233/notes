@@ -190,9 +190,9 @@ This algorithm is an efficient method of finding the greatest common divisor.
 
 $$
 \begin{align}
-\textcolor{#e64553}{287} &= \textcolor{#fe640b}{91} \cdot 3 + \textcolor{#df8e1d}{14} \\
-\textcolor{#fe640b}{91} &= \textcolor{#df8e1d}{14} \cdot 6 + \textcolor{#40a02b}{7} \\
-\textcolor{#df8e1d}{14} &= \textcolor{#40a02b}{7} \cdot 2 + 0
+\textcolor{#e78284}{287} &= \textcolor{#ef9f76}{91} \cdot 3 + \textcolor{#e5c890}{14} \\
+\textcolor{#ef9f76}{91} &= \textcolor{#e5c890}{14} \cdot 6 + \textcolor{#a6d189}{7} \\
+\textcolor{#e5c890}{14} &= \textcolor{#a6d189}{7} \cdot 2 + 0
 \end{align}
 $$
 
