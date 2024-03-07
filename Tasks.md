@@ -1,11 +1,13 @@
-## Not Done
+## All without Homework
 
 ```tasks
-not done
+tag does not include homework
+short
 ```
 
 ## Homework
 
 ```tasks
 tag includes homework
+not done
 ```

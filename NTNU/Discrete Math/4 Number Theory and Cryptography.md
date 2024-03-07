@@ -305,4 +305,4 @@ This shows that $c \mid d_{0}$ and therefore complete our proofs.
 
 If $a, b, c$ are positive integers such that $\gcd (a,b) = 1$ and $a \mid bc$, then $a \mid c$.
 
-
+- [ ] Discrete Math notes
