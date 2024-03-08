@@ -182,20 +182,6 @@ $$
 d = \gcd (a,b)
 $$
 
-#### The Euclidean Algorithm
-
-This algorithm is an efficient method of finding the greatest common divisor.
-
-**Example:** $\gcd (91, 287)$
-
-$$
-\begin{align}
-\textcolor{#e78284}{287} &= \textcolor{#ef9f76}{91} \cdot 3 + \textcolor{#e5c890}{14} \\
-\textcolor{#ef9f76}{91} &= \textcolor{#e5c890}{14} \cdot 6 + \textcolor{#a6d189}{7} \\
-\textcolor{#e5c890}{14} &= \textcolor{#a6d189}{7} \cdot 2 + 0
-\end{align}
-$$
-
 ### Definition 3/4 - Relatively Prime
 
 The integers $a$ and $b$ are **relatively prime** if their greatest common divisor is $1$.
@@ -218,7 +204,23 @@ $$
 ab = \gcd (a,b) \cdot \text{lcm} (a,b)
 $$
 
-### Lemma 1
+### The Euclidean Algorithm
+
+This algorithm is an efficient method of finding the greatest common divisor.
+
+**Example:** $\gcd (91, 287)$
+
+$$
+\begin{align}
+287 &= 91 \cdot 3 + 14 \\
+91 &= 14 \cdot 6 + 7 \\
+14 &= 7 \cdot 2 + 0
+\end{align}
+$$
+
+Therefore $\gcd (91, 287) = 7$.
+
+#### Lemma 1
 
 Let $a = bq + r$, where $a, b, q, r$ are integers. Then
 
@@ -345,6 +347,8 @@ To solve $x$, one method is to find an integer $\bar{a}$ such that $a\bar{a} \eq
 
 If $a$ and $m$ are relatively prime integers and $m > 1$, then $\bar{a}$, an inverse of $a$ modulo $m$ exists. Furthermore, $\bar{a}$ is unique modulo $m$.
 
+($\bar{a}$ unique modulo $m$ means there exists unique $\bar{a} < m$ is an inverse of $a$ modulo $m$ and every other inverse of $a$ modulo $m$, $\bar{b}$ is congruent to $\bar{a}$ modulo $m$, that is $\bar{b} \equiv \bar{a} \pmod{m}$.)
+
 - [ ] proof DM 4.4 Theorem 1
 
 ### Theorem 2 - Chinese Remainder Theorem
@@ -361,6 +365,16 @@ x &\equiv a_{n} \pmod{m_{n}}
 $$
 
 has a unique solution modulo $m = m_{1}m_{2} \cdots m_{n}$.
+
+**Proof:**
+
+Proof of **Existence**: let $M_{k} = \displaystyle\frac{m}{m_{k}}$ for $k = 1, 2, \cdots, n$. As $\gcd (m_{i}, m_{k}) = 1$ for $1 \le i,k \le n, i \ne k$, then
+
+$$
+\gcd (m_{k}, M_{k}) = 1.
+$$
+
+By [[#Theorem 1 - Inverse for Linear Congruences|Theorem 1]], 
 
 - [ ] proof DM 4.4 Theorem 2
 

@@ -17,7 +17,7 @@ Let $p$ and $q$ be propositions. The *conjunction of* $p$ and $q$, denoted by $p
 
 ### Definition 3 - Disjunction
 
-Let $p$ and $q$ be propositions. The *disjunction of* $p$ and $q$, denoted by $p \land q$, is the proposition “$p$ or $q$.”
+Let $p$ and $q$ be propositions. The *disjunction of* $p$ and $q$, denoted by $p \lor q$, is the proposition “$p$ or $q$.”
 
 ### Definition 4 - Exclusive OR
 
