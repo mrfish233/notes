@@ -644,7 +644,7 @@ $$
 where
 
 $$
-R_{n}(x) = \frac{f^{n+1}(c)}{n!}(x-a)^{(n+1)!} (x-a)^{n+1}
+R_{n}(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}
 $$
 
 for some $c$ between $a$ and $x$.
