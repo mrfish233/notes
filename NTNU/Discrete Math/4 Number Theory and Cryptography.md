@@ -305,4 +305,63 @@ This shows that $c \mid d_{0}$ and therefore complete our proofs.
 
 If $a, b, c$ are positive integers such that $\gcd (a,b) = 1$ and $a \mid bc$, then $a \mid c$.
 
-- [ ] Discrete Math notes
+- [ ] proof DM Lemma 2
+
+#### Lemma 3
+
+If $p$ is a prime and $p \mid a_{1}a_{2}\cdots a_{n}$, where each $a_{i}$ is an integer, then $p \mid a_{i}$ for some $i$.
+
+- [ ] proof DM Lemma 3
+
+### Theorem 7
+
+Let $m$ be a positive integer and let $a, b, c$ be integers. If $ac \equiv bc \pmod{m}$ and $\gcd(c, m) = 1$, then $a \equiv b \pmod{m}$.
+
+**Proof:**
+
+As $ac \equiv bc \pmod{m}$, then $m \mid ac - bc = c(a-b)$. By [[#Lemma 2]], because $\gcd (c, m) = 1$, then
+
+$$
+m \mid a-b.
+$$
+
+Therefore $a \equiv b \pmod{m}$.
+
+## 4.4 Solving Congruences
+
+### Linear Congruences
+
+A congruence of the form
+
+$$
+ax \equiv b \pmod{m}
+$$
+
+where $m \in \mathbb{Z^{+}}, a,b \in \mathbb{Z}$ and $x$ is a variable, is called a **linear congruence**.
+
+To solve $x$, one method is to find an integer $\bar{a}$ such that $a\bar{a} \equiv b \pmod{m}$ if it exists. The integer $\bar{a}$ is said to be an **inverse** of $a$ modulo $m$.
+
+### Theorem 1 - Inverse for Linear Congruences
+
+If $a$ and $m$ are relatively prime integers and $m > 1$, then $\bar{a}$, an inverse of $a$ modulo $m$ exists. Furthermore, $\bar{a}$ is unique modulo $m$.
+
+- [ ] proof DM 4.4 Theorem 1
+
+### Theorem 2 - Chinese Remainder Theorem
+
+Let $m_{1}, m_{2}, \cdots, m_{n}$ be *pairwise relatively prime* positive integers greater than $1$ and $a_{1}, a_{2}, \cdots, a_{n}$ arbitrary integers. Then the system
+
+$$
+\begin{align}
+x &\equiv a_{1} \pmod{m_{1}}, \\
+x &\equiv a_{1} \pmod{m_{1}}, \\
+& \ \vdots \\
+x &\equiv a_{n} \pmod{m_{n}}
+\end{align}
+$$
+
+has a unique solution modulo $m = m_{1}m_{2} \cdots m_{n}$.
+
+- [ ] proof DM 4.4 Theorem 2
+
+
