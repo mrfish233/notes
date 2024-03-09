@@ -476,9 +476,24 @@ $$
 By [[#Theorem 1 - Inverse for Linear Congruences|Theorem 1]], there exists an integer $y_{k}$ such that
 
 $$
-M_{k} \cdot y_{k} \equiv 1 \pmod{m_{k}}.
+M_{k} y_{k} \equiv 1 \pmod{m_{k}}.
 $$
 
-- [ ] proof DM 4.4 Theorem 2
+Then, construct a simultaneous solution
 
+$$
+\begin{align}
+x &= \sum\limits_{k=1}^{n} a_{k}M_{k}y_{k} \\
+&= a_{1}M_{1}y_{1} + a_{2}M_{2}y_{2} + \cdots + a_{n}M_{n}y_{n}.
+\end{align}
+$$
 
+Because $M_{j} \equiv 0 \pmod{m_k}$ whenever $j \ne k$ and $M_{k} y_{k} \equiv 1 \pmod{m_{k}}$, by [[#Theorem 5 - Addition and Multiplication Rules|Theorem 5]],
+
+$$
+x \equiv a_{k}M_{k}y_{k} \equiv a_{k} \pmod{m_{k}}, \quad k = 1, 2, \cdots, n.
+$$
+
+This shows that $x$ is a simultaneous solution to the $n$ congruences.
+
+*(Proof of Uniqueness)* 
