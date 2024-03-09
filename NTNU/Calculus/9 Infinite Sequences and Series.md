@@ -1,3 +1,5 @@
+# 9 Infinite Sequences and Series
+
 ## 9.1 Sequences
 
 ### Definition 1 - Convergence and Divergence

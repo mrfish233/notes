@@ -1,3 +1,5 @@
+# NOTES
+
 A repo that keeps all my notes.
 
 The notes are written using [Obsidian](https://obsidian.md/). This includes some app-specific formatting, which therefore provides a better reading experience when utilized.

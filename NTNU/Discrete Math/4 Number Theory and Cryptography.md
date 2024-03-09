@@ -1,3 +1,5 @@
+# 4 Number Theory and Cryptography
+
 ## 4.1 Divisibility and Modular Arithmetic
 
 ### Definition 1 - Division
@@ -311,7 +313,7 @@ $$
 S = \{ax + by \mid x,y \in \mathbb{Z}, ax + by > 0 \}
 $$
 
-The set is **nonempty** since it contains either $a$ or $-a$ with $x = \pm 1$ and $y = 0$. Since $S$ is nonempty set of positive integers, by **well-ordering principle**, there exists a smallest element $d_0$ such that
+The set is **nonempty** since it contains either $a$ or $b$ with $x = 1, y = 0$ and $x = 0, y = 1$. Since $S$ is nonempty set of positive integers, by **well-ordering principle**, there exists a smallest element $d_0$ such that
 
 $$
 d_{0} = ax_{0} + by_{0}, \quad x_{0}, y_{0} \in \mathbb{Z}.
@@ -326,7 +328,7 @@ $$
 \forall c \ (c \mid a) \land (c \mid b) \implies c \mid d_{0}
 $$
 
-First, let $a = kd_{0} + r, k \in \mathbb{Z}, 0 \le r < d_{0}$ (by [[#Theorem 2 - The Division Algorithm|The Division Algorithm]]). Then
+*(Proof  1.)* First, let $a = kd_{0} + r, k \in \mathbb{Z}, 0 \le r < d_{0}$ (by [[#Theorem 2 - The Division Algorithm|The Division Algorithm]]). Then
 
 $$
 \begin{align}
@@ -344,7 +346,7 @@ $$
 
 which shows that $d_{0} \mid a$ (by definition of [[#Definition 1 - Division|division]]). Similarly $d_{0}$ is also a divisor of $b$ and therefore $d_{0} \mid a$ and $d_{0} \mid b$.
 
-Next, let $c$ be a common divisor of $a$ and $b$, that is, there exist $k_{1}$ and $k_{2}$ such that $a = ck_{1}$ and $b = ck_{2}$. Then
+*(Proof  2.)* Next, let $c$ be a common divisor of $a$ and $b$, that is, there exist $k_{1}$ and $k_{2}$ such that $a = ck_{1}$ and $b = ck_{2}$. Then
 
 $$
 \begin{align}
@@ -431,9 +433,22 @@ $$
 ax \equiv 1 \pmod{m}.
 $$
 
-This shows that $x$ is the inverse of $a$ modulo $m$.
+This shows that there exists an integer $x$  such that it is the inverse of $a$ modulo $m$.
 
-*(Proof of Uniqueness)* Assume that there are 2 solutions $x_{1}, x_{2}$ of the congruence $ax \equiv 1 \pmod{m}$. By [[#Theorem 7]]
+*(Proof of Uniqueness)* Assume that there are 2 solutions $x_{1}, x_{2} \ (0 \le x_{1}, x_{2} < m)$ of the congruence $ax \equiv 1 \pmod{m}$. Then
+
+$$
+ax_{1} \equiv 1 \pmod{m} \qquad \text{and} \qquad
+ax_{2} \equiv 1 \pmod{m}
+$$
+
+This shows that $ax_{1} \equiv ax_{2} \equiv 1 \pmod{m}$. By [[#Theorem 7]], as $\gcd (a, m) = 1$, then
+
+$$
+x_{1} \equiv x_{2} \pmod{m}.
+$$
+
+Therefore $x_{1} = x_{2}$. This proof the inverse of modulo $m$ is unique.
 
 ### Theorem 2 - Chinese Remainder Theorem
 

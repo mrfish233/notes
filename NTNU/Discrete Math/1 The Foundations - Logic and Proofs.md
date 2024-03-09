@@ -1,3 +1,5 @@
+# 1 The Foundations - Logic and Proofs
+
 ## 1.1 Propositional Logic
 
 A **proposition**: a declarative sentence that is either true or false. For example:

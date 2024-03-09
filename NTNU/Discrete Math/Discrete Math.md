@@ -1,3 +1,5 @@
+# Discrete Math
+
 ## Reference
 
 Kenneth Rosen - Discrete Mathematics and Its Applications - 8th edition
