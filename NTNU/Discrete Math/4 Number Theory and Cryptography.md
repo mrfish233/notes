@@ -345,11 +345,29 @@ To solve $x$, one method is to find an integer $\bar{a}$ such that $a\bar{a} \eq
 
 ### Theorem 1 - Inverse for Linear Congruences
 
-If $a$ and $m$ are relatively prime integers and $m > 1$, then $\bar{a}$, an inverse of $a$ modulo $m$ exists. Furthermore, $\bar{a}$ is unique modulo $m$.
+If $a$ and $m$ are relatively prime integers and $m > 1$, then $\bar{a}$, an inverse of $a$ modulo $m$ exists. That is,
+
+$$
+a \bar{a} \equiv 1 \pmod{m}
+$$
+
+Furthermore, $\bar{a}$ is **unique** modulo $m$.
 
 ($\bar{a}$ unique modulo $m$ means there exists unique $\bar{a} < m$ is an inverse of $a$ modulo $m$ and every other inverse of $a$ modulo $m$, $\bar{b}$ is congruent to $\bar{a}$ modulo $m$, that is $\bar{b} \equiv \bar{a} \pmod{m}$.)
 
-- [ ] proof DM 4.4 Theorem 1
+**Proof:**
+
+As $\gcd (a, m) = 1$, by [[#Theorem 6 - Bézout's Identity|Bézout's Identity]], there are integers $x, y$ such that
+
+$$
+ax + my = 1.
+$$
+
+This implies that
+
+$$
+ax + my \equiv 1 \pmod{m}.
+$$
 
 ### Theorem 2 - Chinese Remainder Theorem
 
