@@ -11,15 +11,15 @@ Propositional variables: true is T and false is F.
 
 ### Definition 1 - Negation
 
-Let $p$ be a proposition. The _negation of_ $p$, denoted by $\neg p$ (or $\bar{p}$), is the statement "It is not the case $p$.”
+Let $p$ be a proposition. The _negation of_ $p$, denoted by $\neg p$ (or $\bar{p}$), is the statement "It is not the case $p$."
 
 ### Definition 2 - Conjunction
 
-Let $p$ and $q$ be propositions. The *conjunction of* $p$ and $q$, denoted by $p \land q$, is the proposition “$p$ and $q$.”
+Let $p$ and $q$ be propositions. The *conjunction of* $p$ and $q$, denoted by $p \land q$, is the proposition "$p$ and $q$."
 
 ### Definition 3 - Disjunction
 
-Let $p$ and $q$ be propositions. The *disjunction of* $p$ and $q$, denoted by $p \lor q$, is the proposition “$p$ or $q$.”
+Let $p$ and $q$ be propositions. The *disjunction of* $p$ and $q$, denoted by $p \lor q$, is the proposition "$p$ or $q$."
 
 ### Definition 4 - Exclusive OR
 
@@ -34,7 +34,7 @@ Let $p$ and $q$ be propositions. The *exclusive or* of $p$ and $q$, denoted by $
 
 ### Definition 5 - Implication
 
-Let $p$ and $q$ be propositions. The _conditional statement_ $p \to q$ (or $p \Rightarrow q$) is the proposition “if $p$, then $q$.”
+Let $p$ and $q$ be propositions. The _conditional statement_ $p \to q$ (or $p \Rightarrow q$) is the proposition "if $p$, then $q$."
 
 The statement $p \to q$ is also called an **implication**. This statement play such an essential role in mathematical reasoning. The following ways will be encountered to express this conditional statement:
 
@@ -57,7 +57,7 @@ The conditional statement $p \to q$ has following related proposition:
 
 ### Definition 6 - Bi-Implications
 
-Let $p$ and $q$ be propositions. The *biconditional statement* $p \leftrightarrow q$ (or $p \Leftrightarrow q$) is the proposition “$p$ if and only if $q$.” Biconditional statements are also called bi-implications.
+Let $p$ and $q$ be propositions. The *biconditional statement* $p \leftrightarrow q$ (or $p \Leftrightarrow q$) is the proposition "$p$ if and only if $q$." Biconditional statements are also called bi-implications.
 
 The other common way to express $p \leftrightarrow q$:
 
@@ -83,7 +83,7 @@ A compound proposition that is *neither* a tautology nor a contradiction is call
 
 The compound propositions $p$ and $q$ are called *logically equivalent* if $p \leftrightarrow q$ is a tautology. The notation $p \equiv q$ denotes that $p$ and $q$ are logically equivalent. The symbol $\Leftrightarrow$ is sometimes used instead of $\equiv$ to denote logical equivalence.
 
-**De Morgan’s Laws**
+**De Morgan's Laws**
 This truth table shows the equivalence of $\lnot (p \lor q) \equiv \lnot p \land \lnot q$ and $\lnot (p \land q) \equiv \lnot p \lor \lnot q$.
 
 | $p$ | $q$ | $\lnot (p \lor q)$ | $\lnot p \land \lnot q$ | $\lnot (p \land q)$ | $\lnot p \lor \lnot q$ |

@@ -102,7 +102,7 @@ A sequence $\{a_{n}\}$ is **nondecreasing** if $a_{n} \le a_{n+1}$ for all $n$. 
 
 ### Theorem 6 - The Monotonic Sequence Theorem
 
-If a sequence $\{a_{n}\}$ is both *[[#Definition 3 - Bounded Monotonic Sequences|bounded]]* and *[[#Definition 4|monotonic]]*, then the sequence converges.
+If a sequence $\{a_{n}\}$ is both [bounded](#Definition%203%20-%20Bounded%20Monotonic%20Sequences) and [monotonic](#Definition%204), then the sequence converges.
 
 ## 9.2 Infinite Series
 
@@ -162,7 +162,7 @@ If $\sum\limits_{n=1}^{\infty}a_{n}$ converges, then $a_{n} \to 0$.
 
 ### The $n$th-Term Test for Divergence
 
-$\sum\limits_{n=1}^{\infty}a_{n}$ **diverges** if $\lim_{n \to \infty}a_{n}$ fails to exist or is different from zero. (A [[1 The Foundations - Logic and Proofs#Proofs by Contraposition|Contraposition]] of [[#Theorem 7]].)
+$\sum\limits_{n=1}^{\infty}a_{n}$ **diverges** if $\lim_{n \to \infty}a_{n}$ fails to exist or is different from zero. (A [contraposition](1%20The%20Foundations%20-%20Logic%20and%20Proofs.md#Proofs%20by%20Contraposition) of [Theorem 7](#Theorem%207).)
 
 **Example:** $\sum\limits_{n=1}^{\infty} \frac{n+1}{n}$ diverges because $\frac{n+1}{n} \to 1$.
 
@@ -175,9 +175,9 @@ If $\sum\limits a_{n}=A$ and $\sum\limits b_{n}=B$ are convergent series, then
 
 ## 9.3 The Integral Test
 
-### Corollary of [[#Theorem 6 - The Monotonic Sequence Theorem|Theorem 6]]
+### Corollary of [Theorem 6](#Theorem%206%20-%20The%20Monotonic%20Sequence%20Theorem)
 
-A series $\sum\limits_{n=1}^{\infty} a_n$ of nonnegative terms **converges** if and only if its partial sums are **[[#Definition 3 - Bounded Monotonic Sequences|bounded from above]]**.
+A series $\sum\limits_{n=1}^{\infty} a_n$ of nonnegative terms **converges** if and only if its partial sums are **[bounded from above](#Definition%203%20-%20Bounded%20Monotonic%20Sequences)**.
 
 #### Example: harmonic series
 
@@ -188,7 +188,7 @@ $$
 \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} + \cdots
 $$
 
-Although $a_{n} \to 0$, the series **diverges** because there is no [[#Definition 3 - Bounded Monotonic Sequences|upper bound]] for its partial sums. By grouping the series in the following way:
+Although $a_{n} \to 0$, the series **diverges** because there is no [upper bound](#Definition%203%20-%20Bounded%20Monotonic%20Sequences) for its partial sums. By grouping the series in the following way:
 
 $$
 \begin{align}
@@ -220,7 +220,7 @@ $$
 
 **Solution:**
 
-If $p \le 0$, the series **diverges** by the [[#The $n$th-Term Test for Divergence|nth-term test]]. 
+If $p \le 0$, the series **diverges** by the [nth-term test](#The%20$n$th-Term%20Test%20for%20Divergence). 
 
 If $0 < p < 1$, then $1-p > 0$ and
 
@@ -228,9 +228,9 @@ $$
 \int_{1}^{\infty} \frac{1}{x^{p}} \ dx= \frac{1}{1-p} \lim_{b \to \infty} (b^{1-p} - 1) = \infty. 
 $$
 
-Therefore, the series **diverges** by [[#Theorem 9 - The Integral Test|the Integral Test]].
+Therefore, the series **diverges** by [the Integral Test](#Theorem%209%20-%20The%20Integral%20Test).
 
-If $p = 1$, it is [[#Example harmonic series|harmonic series]] which **diverges**.
+If $p = 1$, it is [harmonic series](#Example%20harmonic%20series) which **diverges**.
 
 If $p > 1$, then $f(x) = \frac{1}{x^{p}}$ is a positive, continuous and decreasing function of $x$. Since
 
@@ -244,7 +244,7 @@ $$
 \end{align}
 $$
 
-The series **converges** by [[#Theorem 9 - The Integral Test|the Integral Test]].
+The series **converges** by [the Integral Test](#Theorem%209%20-%20The%20Integral%20Test).
 
 ## 9.4 Comparison Tests
 
@@ -267,7 +267,7 @@ $$
 1 + \sum\limits_{n=0}^{\infty} \frac{1}{2^{n}} = 1 + 1 + \frac{1}{2} + \frac{1}{2^{2}} + \cdots
 $$
 
-The [[#Geometric Series|geometric series]] converges and we have
+The [geometric series](#Geometric%20Series) converges and we have
 
 $$
 1 + \sum\limits_{n=0}^{\infty} \frac{1}{2^{n}} = 1 + \frac{1}{1-(\frac{1}{2})} = 3
@@ -313,7 +313,7 @@ $$
 -|a_{n}|  \le a_{n} \le |a_{n}|, \qquad \text{so} \qquad 0 \le a_{n} + |a_{n}| \le 2|a_{n}|
 $$
 
-If $\sum\limits_{n=1}^{\infty} |a_{n}|$ converges, then $\sum\limits_{n=1}^{\infty} 2|a_{n}|$ converges, and by [[#Theorem 10 - Direct Comparison Test| Direct Comparison Test]], the nonnegative series $\sum\limits_{n=1}^{\infty} (a_{n} + |a_{n}|)$ converges. Then
+If $\sum\limits_{n=1}^{\infty} |a_{n}|$ converges, then $\sum\limits_{n=1}^{\infty} 2|a_{n}|$ converges, and by [Direct Comparison Test](#Theorem%2010%20-%20Direct%20Comparison%20Test), the nonnegative series $\sum\limits_{n=1}^{\infty} (a_{n} + |a_{n}|)$ converges. Then
 
 $$
 \begin{align}
@@ -387,7 +387,7 @@ $$
 \frac{1}{2} \le \sqrt[n]{a_{n}} \le \frac{\sqrt[n]{n}}{2}
 $$
 
-Since $\sqrt[n]{n} \to 1$ ([[#Theorem 5]]), we have $\sqrt[n]{a_{n}} \to \frac{1}{2}$ by the [[#Theorem 2 - The Sandwich Theorem|Sandwich Theorem]]. As the limit is less than 1, so the series converges by the Root Test.
+Since $\sqrt[n]{n} \to 1$ ([Theorem 5](#Theorem%205)), we have $\sqrt[n]{a_{n}} \to \frac{1}{2}$ by the [Sandwich Theorem](#Theorem%202%20-%20The%20Sandwich%20Theorem). As the limit is less than 1, so the series converges by the Root Test.
 
 ## 9.6 Alternating Series and Conditional Convergence
 
@@ -423,7 +423,7 @@ $$
 
 ### Definition 7 - Conditional Convergence
 
-A series that is **convergent** but not [[#Definition 6 - Absolute Convergence|absolutely convergent]] is called **conditionally convergent**.
+A series that is **convergent** but not [absolutely convergent](#Definition%206%20-%20Absolute%20Convergence) is called **conditionally convergent**.
 
 ### Theorem 17 - The Rearrangement Theorem for Absolutely Convergent Series
 
@@ -435,12 +435,12 @@ $$
 
 ### Summary of Tests
 
-1. **[[#The $n$th-Term Test for Divergence|The nth-term test for divergence]]**: Unless $a_{n}\to 0$, the series **diverges**.
-2. **[[#Geometric Series]]**: $\sum\limits ar^{n}$ **converges** if $|r| < 1$; otherwise, it **diverges**.
-3. **[[#Example $p$-series|p-series]]**: $\sum\limits \frac{1}{n^{p}}$ **converges** if $p > 1$; otherwise, it **diverges**.
-4. **Series with nonnegative terms**: Try the [[#Theorem 9 - The Integral Test|Integral Test]] or try comparing to a known series with the [[#Theorem 10 - Direct Comparison Test|Direct Comparison Test]] or the [[#Theorem 11 - The Limit Comparison Test|Limit Comparison Test]]. Try the [[#Theorem 13 - The Ratio Test|Ratio Test]] or [[#Theorem 14 - The Root Test|Root Test]].
-5. **Series with some negative terms**: Check if the series $\sum\limits |a_{n}|$ converges by the tests listed above, as the [[#Theorem 12 - The Absolute Convergence Test|Absolute Convergence Test]] implies convergence.
-6. **Alternating series**: $\sum\limits a_{n}$ **converges** if the series satisfies the conditions of the [[#Theorem 15 - The Alternating Series Test|Alternating Series Test]].
+1. **[The nth-term test for divergence](#The%20$n$th-Term%20Test%20for%20Divergence)**: Unless $a_{n}\to 0$, the series **diverges**.
+2. **[Geometric Series](#Geometric%20Series)**: $\sum\limits ar^{n}$ **converges** if $|r| < 1$; otherwise, it **diverges**.
+3. **[p-series](#Example%20$p$-series)**: $\sum\limits \frac{1}{n^{p}}$ **converges** if $p > 1$; otherwise, it **diverges**.
+4. **Series with nonnegative terms**: Try the [Integral Test](#Theorem%209%20-%20The%20Integral%20Test) or try comparing to a known series with the [Direct Comparison Test](#Theorem%2010%20-%20Direct%20Comparison%20Test) or the [Limit Comparison Test](#Theorem%2011%20-%20The%20Limit%20Comparison%20Test). Try the [Ratio Test](#Theorem%2013%20-%20The%20Ratio%20Test) or [Root Test](#Theorem%2014%20-%20The%20Root%20Test).
+5. **Series with some negative terms**: Check if the series $\sum\limits |a_{n}|$ converges by the tests listed above, as the [Absolute Convergence Test](#Theorem%2012%20-%20The%20Absolute%20Convergence%20Test) implies convergence.
+6. **Alternating series**: $\sum\limits a_{n}$ **converges** if the series satisfies the conditions of the [Alternating Series Test](#Theorem%2015%20-%20The%20Alternating%20Series%20Test).
 
 ## 9.7 Power Series
 
@@ -499,7 +499,7 @@ converges at $x = c \ne 0$, then it **converges absolutely** for all $x$ with $|
 
 - [ ] proof of Theorem 18
 
-### Corollary of [[#Theorem 18 - The Convergence Theorem for Power Series|Theorem 18]]
+### Corollary of [Theorem 18](#Theorem%2018%20-%20The%20Convergence%20Theorem%20for%20Power%20Series)
 
 The convergence of the series $\sum\limits c_{n}(x-a)^{n}$ is described by one of the following 3 cases.
 

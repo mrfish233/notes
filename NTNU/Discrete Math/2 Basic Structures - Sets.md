@@ -47,7 +47,7 @@ $$
 x \in \emptyset \to x \in S
 $$
 
-is always true by definition of [[1 The Foundations - Logic and Proofs#Definition 5 - Implication|implications]].
+is always true by definition of [](1%20The%20Foundations%20-%20Logic%20and%20Proofs.md#Definition%205%20-%20Implication|implications).
 
 $\text{(ii)}$ To show that $S \subseteq S$, we must show that $\forall x (x \in S \to x \in S)$ is true. Then
 

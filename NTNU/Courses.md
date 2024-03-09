@@ -1,4 +1,4 @@
 ## TOC
 
-- [[Calculus II]] #Spring #Y2024
-- [[Discrete Math]] #Spring #Y2024
+- [Calculus II](Calculus%20II.md) #Spring #Y2024
+- [Discrete Math](Discrete%20Math.md) #Spring #Y2024
