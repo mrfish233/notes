@@ -68,15 +68,68 @@ $$
 
 We say that $a \equiv b \pmod{m}$ is a **congruence** and that $m$ is its **modulus**.
 
-### Theorem 3/4 - Properties of Congruence
+### Theorem 3 - Equivalence of Congruence
 
 Let $a$ and $b$ be integers, and let $m$ be a positive integer. Then $a \equiv b \pmod{m}$ if and only if
 
 $$
+a \bmod m = b \bmod m.
+$$
+
+**Proof:**
+
+*(Forward Proof)* Suppose $a \equiv b \pmod{m}$, then by [[#Definition 3 - Congruence|definition of congruence]], $m \mid (a-b)$, which exists an integer $k$ such that
+
+$$
+a - b = km. \tag{1}
+$$
+
+Let $a = k_{1}m + r_{1}$ and $b = k_{2}m+ r_{2}$ for some integers $k_{1}, k_{2}, r_{1}, r_{2}$ and $0 \le r_{1}, r_{2} < m$ (by [[#Theorem 2 - The Division Algorithm|Division Algorithm]]). Then
+
+$$
 \begin{align}
-\text{1. } & a \bmod m = b \bmod m; \\
-\text{2. } & \text{there exists an integer } k \text{ such that } a = b + km.
+a - b &= (k_{1}m + r_{1}) - (k_{2}m + r_{2}) \\
+a - b&= (k_{1} - k_{2})m + (r_{1} - r_{2}). \tag{2}
 \end{align}
+$$
+
+As $k, k_{1}, k_2$ are arbitrary positive integers, we can assume that $k = k_{1} - k_{2}$. Then by $(1)$ and $(2)$, we have
+
+$$
+\begin{align}
+a - b &= a - b + (r_{1} - r_{2}) \\
+0 &= r_{1} - r_{2} \\
+r_{1} &= r_{2}
+\end{align}
+$$
+
+This shows that $a \bmod m = b \bmod m$.
+
+*(Backward Proof)* Let $a = k_{1}m + r_{1}$ and $b = k_{2}m+ r_{2}$ for some integers $k_{1}, k_{2}, r_{1}, r_{2}$ and $0 \le r_{1}, r_{2} < m$. As $a \bmod m = b \bmod m$, then by [[#Definition 2|definition of remainder]], $r_{1} = r_{2}$. Then
+
+$$
+\begin{align}
+a - b &= (k_{1}m + r_{1}) - (k_{2}m + r_{2}) \\
+&= (k_{1} - k_{2})m + (r_{1} - r_{2}) \\
+&= (k_{1} - k_{2})m + 0 \\
+&= (k_{1} - k_{2})m
+\end{align}
+$$
+
+This shows that $m \mid (a-b)$ by [[#Definition 1 - Division|definition of division]]. Therefore, by [[#Definition 3 - Congruence|definition of congruence]],
+
+$$
+a \equiv b \pmod{m}.
+$$
+
+This completes our proof.
+
+### Theorem 4
+
+Let $a$ and $b$ be integers, and let $m$ be a positive integer. Then $a \equiv b \pmod{m}$ if and only if there exists an integer $k$ such that
+
+$$
+a = b + km.
 $$
 
 ### Theorem 5 - Addition and Multiplication Rules
@@ -89,7 +142,7 @@ $$
 
 **Proof:** (by [[1 The Foundations - Logic and Proofs#Direct Proofs|direct proof]])
 
-Since $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, by [[#Theorem 3/4 - Properties of Congruence|Theorem 4]] there exist integers $k_{1}$ and $k_{2}$ with $b = a + k_{1}m$ and $d = c + k_{2}m$. Hence,
+Since $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, by [[#Theorem 4]] there exist integers $k_{1}$ and $k_{2}$ with $b = a + k_{1}m$ and $d = c + k_{2}m$. Hence,
 
 $$
 \begin{align}
@@ -357,17 +410,30 @@ Furthermore, $\bar{a}$ is **unique** modulo $m$.
 
 **Proof:**
 
-As $\gcd (a, m) = 1$, by [[#Theorem 6 - Bézout's Identity|Bézout's Identity]], there are integers $x, y$ such that
+*(Proof of Existence)* As $\gcd (a, m) = 1$, by [[#Theorem 6 - Bézout's Identity|Bézout's Identity]], there are integers $x, y$ such that
 
 $$
 ax + my = 1.
 $$
 
-This implies that
+By [[#Theorem 3 - Equivalence of Congruence|Theorem 3]], this implies that
 
 $$
-ax + my \equiv 1 \pmod{m}.
+\begin{align}
+(ax + my) \bmod m &= 1 \bmod m \\
+ax + my &\equiv 1 \pmod{m}.
+\end{align}
 $$
+
+Because $my \equiv 1 \pmod{m}$, by [[#Theorem 5 - Addition and Multiplication Rules|Theorem 5]], it follows that
+
+$$
+ax \equiv 1 \pmod{m}.
+$$
+
+This shows that $x$ is the inverse of $a$ modulo $m$.
+
+*(Proof of Uniqueness)* Assume that there are 2 solutions $x_{1}, x_{2}$ of the congruence $ax \equiv 1 \pmod{m}$. By [[#Theorem 7]]
 
 ### Theorem 2 - Chinese Remainder Theorem
 
@@ -386,13 +452,17 @@ has a unique solution modulo $m = m_{1}m_{2} \cdots m_{n}$.
 
 **Proof:**
 
-Proof of **Existence**: let $M_{k} = \displaystyle\frac{m}{m_{k}}$ for $k = 1, 2, \cdots, n$. As $\gcd (m_{i}, m_{k}) = 1$ for $1 \le i,k \le n, i \ne k$, then
+*(Proof of Existence)* let $M_{k} = \displaystyle\frac{m}{m_{k}}$ for $k = 1, 2, \cdots, n$. As $\gcd (m_{i}, m_{k}) = 1$ for $1 \le i,k \le n, i \ne k$, then
 
 $$
 \gcd (m_{k}, M_{k}) = 1.
 $$
 
-By [[#Theorem 1 - Inverse for Linear Congruences|Theorem 1]], 
+By [[#Theorem 1 - Inverse for Linear Congruences|Theorem 1]], there exists an integer $y_{k}$ such that
+
+$$
+M_{k} \cdot y_{k} \equiv 1 \pmod{m_{k}}.
+$$
 
 - [ ] proof DM 4.4 Theorem 2
 
