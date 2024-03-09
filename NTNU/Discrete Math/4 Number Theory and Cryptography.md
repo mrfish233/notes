@@ -537,4 +537,8 @@ $$
 a^{p} \equiv a \pmod{p}.
 $$
 
+(Some amazing proofs can be found at this [link](https://artofproblemsolving.com/wiki/index.php/Fermat%27s_Little_Theorem).)
+
+**Proof:**
+
 
