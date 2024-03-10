@@ -390,7 +390,25 @@ This shows that $c \mid d_{0}$ and therefore complete our proofs.
 
 If $a, b, c$ are positive integers such that $\gcd (a,b) = 1$ and $a \mid bc$, then $a \mid c$.
 
-- [ ] proof DM Lemma 2
+**Proof:**
+
+As $\gcd (a,b) = 1$, by [Bézout's Identity](#Theorem%2011%20-%20Bézout's%20Identity) there are integers $x, y$ such that $ax + by = 1$. Multiplying both sides by $c$ and we have
+
+$$
+axc + byc = c.
+$$
+
+As $a \mid bc$, by [Definition 1](#Definition%201%20-%20Division) there is an integer $k$ such that $bc = ak$. Substitute this statement into statement above and we have
+
+$$
+\begin{align}
+axc + byc &= c \\
+axc + y(ak) &= c \\
+a(xc + yk) &= c
+\end{align}
+$$
+
+This implies that $a$ is divisible by $c$, which is $c \mid a$. This complete our proof.
 
 #### Lemma 3
 
