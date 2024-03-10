@@ -1,4 +1,4 @@
-\# 4 Number Theory and Cryptography
+# 4 Number Theory and Cryptography
 
 ## 4.1 Divisibility and Modular Arithmetic
 
