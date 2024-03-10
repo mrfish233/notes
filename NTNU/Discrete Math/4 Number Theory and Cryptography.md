@@ -1,4 +1,4 @@
-# 4 Number Theory and Cryptography
+\# 4 Number Theory and Cryptography
 
 ## 4.1 Divisibility and Modular Arithmetic
 
@@ -291,15 +291,37 @@ $$
 
 **Proof:**
 
-If we can show that **all** the common divisors of $a$ and $b$ are the same as the common divisors of $b$ and $r$, we will have shown that $\gcd (a,b) = \gcd (b,r)$.
+If we can show that **all** the common divisors of $a$ and $b$ are the same as the common divisors of $b$ and $r$, we will have shown that $\gcd (a,b) = \gcd (b,r)$. That is, we show that both $\gcd (a, b) \le \gcd (b, r)$ and $\gcd (b, r) \le \gcd (a, b)$ hold.
 
-Suppose integer $d$ divides both $a$ and $b$, or $d \mid a$ and $d \mid b$. Then it follows that $d$ also divides $a - bq = r$ (from [Theorem 1](#Theorem%201)). Hence, any common divisor of $a$ and $b$ is also a common divisor of $b$ and $r$.
+Suppose integer $d_{1}$ is a common divisor of $a$ and $b$. Let $a = k_{1}d_{1}$ and $b = k_{2}d_{1}$, where $k_{1}, k_{2} \in \mathbb{Z}$. Then
 
-Suppose $d$ divides both $b$ and $r$. Then $d$ also divides $bq + r = a$. Hence, any common divisor of $b$ and $r$ is also a common divisor of $a$ and $b$.
+$$
+\begin{align}
+r &= a - bq \\
+&= k_{1}d_{1} - k_{2}d_{1}q \\
+&= d_{1}(k_{1} - k_{2}q)
+\end{align}
+$$
+
+This implies that every common divisor of $a$ and $b$ is a divisor of $r$. Therefore $\gcd (a, b) \le \gcd (b, r)$.
+
+Similarly, suppose $d_{2}$ is a common divisor of $b$ and $r$. Let $b = k_{3}d_{2}$ and $r = k_{4}d_{2}$, where $k_{3}, k_{4} \in \mathbb{Z}$. Then
+
+$$
+\begin{align}
+a &= bq + r \\
+&= k_{3}d_{2}q + k_{4}d_{2} \\
+&= d_{2} (k_{3}q + k_{4})
+\end{align}
+$$
+
+This implies that every common divisor of $b$ and $r$ is a divisor of $a$. Therefore $\gcd (b, r) \le \gcd (a, b)$.
 
 Consequently,
 
-$$\gcd (a,b) = \gcd (b,r).$$
+$$
+\gcd (a,b) = \gcd (b,r).
+$$
 
 ### Theorem 11 - Bézout's Identity
 
@@ -541,4 +563,70 @@ $$
 
 **Proof:**
 
+Proving steps:
 
+1. First by proving if integers $i, j \in \{1, 2, 3, \cdots, p-1\}, i \ne j$, then $ai \not \equiv aj \pmod{p}$.
+2. If integer $k \in \{1, 2, 3, \cdots, p-1\}$, then $ak \not \equiv 0 \pmod{p}$. Use this statement and statement above to prove that
+
+$$
+(p-1)! \equiv a^{p-1} (p-1)! \pmod{p}.
+$$
+
+3. Use the statement above to prove that $a^{p-1} \equiv 1 \pmod{p}$.
+
+*(Proof 1.)* Suppose $a$ is not divisible by $p$. Let the integers $i$ and $j$ where $i, j \in \{1, 2, 3, \cdots, p-1\}$. If $i \ne j$, then $ai \not \equiv aj \pmod{p}$.
+
+If not, assume that when $i \ne j$, we have $ai \equiv aj \pmod{p}$. By [Definition 3](#Definition%203%20-%20Congruence), we have
+
+$$
+p \mid a(i-j)
+$$
+
+As $\gcd (a, p) = 1$, by [Lemma 2](#Lemma%202), we have $p \mid (i - j)$. Because of $i < p, j < p, |i-j| < p$, for $p \mid (i - j)$ to be valid, we must have
+
+$$
+i - j = 0 \quad \text{or} \quad i=j.
+$$
+
+This contradicts with our assumption of $i \ne j$. Therefore $ai \not \equiv aj \pmod{p}$.
+
+*(Proof 2.)* Let $k \in \{1, 2, \cdots, p-1\}$. As $p$ is a prime number, and $\gcd (a, p) = 1$, it shows that
+
+$$
+a \cdot k\equiv x_{k} \pmod{p}, \quad x_{k}\in \{1, 2, \cdots, p-1\}.
+$$
+
+By the statement $ai \not \equiv aj \pmod{p}$ when $i \ne j$, we know that $x_{k_{1}} \ne x_{k_{2}}$ when $k_{1} \ne k_{2}$. Hence, if we multiply $a, 2a, 3a, \cdots, (p-1)a$, we must have
+
+$$
+\begin{align}
+a \cdot 2a \cdot 3a \cdot \ldots \cdot (p-1)a &\equiv x_{1}x_{2}x_{3} \cdots x_{p-1} \\
+&\equiv 1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-1) \pmod{p}.
+\end{align}
+$$
+
+Therefore we have
+
+$$
+a^{p-1} (p-1)! \equiv (p-1)! \pmod{p}. \tag{2}
+$$
+
+*(Proof 3.)* Let $a \in \{1, 2, 3, \cdots, p-1\}$. Then $p$ is not divisible by any $a$, that is
+
+$$
+p \not \mid a, \quad a \in \{1, 2, 3, \cdots, p-1\}.
+$$
+
+By contraposition of [Lemma 3](#Lemma%203), we have
+
+$$
+p \not \mid 1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-1).
+$$
+
+This implies that $\gcd (p, (p-1)!) = 1$. Combine the result from $(2)$ and [Theorem 12](#Theorem%2012%20-%20Relation%20of%20Congruence%20and%20GCD), we have
+
+$$
+a^{p-1} \equiv 1 \pmod{p}.
+$$
+
+This complete our proof.
