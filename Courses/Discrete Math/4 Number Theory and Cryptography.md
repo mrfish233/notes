@@ -95,7 +95,7 @@ a - b&= (k_{1} - k_{2})m + (r_{1} - r_{2}). \tag{2}
 \end{align}
 $$
 
-As $k, k_{1}, k_2$ are arbitrary positive integers, we can assume that $k = k_{1} - k_{2}$. Then by $(1)$ and $(2)$, we have
+As $k, k_{1}, k_2$ are arbitrary integers, we can assume that $k = k_{1} - k_{2}$. Then by $(1)$ and $(2)$, we have
 
 $$
 \begin{align}
