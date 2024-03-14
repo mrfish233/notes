@@ -470,7 +470,7 @@ $$
 1 - \frac{1}{2} (x-2) + \frac{1}{4} (x-2)^{2} + \cdots + \left(-\frac{1}{2}\right)^{n-1} (x-2)^{n} + \cdots
 $$
 
-has first term $1$ and ratio $r = \displaystyle-\frac{x-2}{2}$. The series converges for
+has first term $1$ and ratio $r = -\cfrac{x-2}{2}$. The series converges for
 
 $$
 \begin{align}
