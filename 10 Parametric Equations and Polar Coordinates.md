@@ -14,6 +14,8 @@ over an interval $I$ of $t$-values, then the set of points $(x, y) = (f(t), g(t)
 
 The variable $t$ is a **parameter** for the curve, and its domain $I$ is the **parameter interval**. If $I \in [a,b]$, the point $(f(a), g(a))$ is the **initial point** of the curve and $(f(b), g(b))$ is the **terminal point**.
 
+The equations and interval together constitute a **parametrization** of the curve.
+
 ## 10.2 Calculus with Parametric Curves
 
 ### Parametric Formula for $dy/dx$
