@@ -190,7 +190,7 @@ This shows that $n^2$ is also even. Therefore the statement “if $n^2$ is an od
 
 ### Proofs by Contradiction
 
-As the statement $r \land \lnot r$ is a contradiction whenever $r$ is a proposition, we can prove that $p$ is true if we can show that $p \to (r \land \lnot r)$ is true for some proposition $r$.
+As the statement $r \land \lnot r$ is a contradiction whenever $r$ is a proposition, we can prove that $p$ is true if we can show that $\lnot p \to (r \land \lnot r)$ is true for some proposition $r$.
 
 **Example:** Prove that $\sqrt{2}$ is irrational.
 
