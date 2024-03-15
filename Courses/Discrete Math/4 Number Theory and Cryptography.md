@@ -503,7 +503,7 @@ Let $m_{1}, m_{2}, \cdots, m_{n}$ be *pairwise relatively prime* positive intege
 $$
 \begin{align}
 x &\equiv a_{1} \pmod{m_{1}}, \\
-x &\equiv a_{1} \pmod{m_{1}}, \\
+x &\equiv a_{2} \pmod{m_{2}}, \\
 & \ \vdots \\
 x &\equiv a_{n} \pmod{m_{n}}
 \end{align}
