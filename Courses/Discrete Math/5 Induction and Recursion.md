@@ -27,3 +27,11 @@ Strong induction differs from mathematical induction is that the inductive step 
 ### The Well-Ordering Property
 
 Every nonempty set of nonnegative integers has a **least** element.
+
+## 5.3 Recursive Definitions and Structural Introduction
+
+### Theorem 1 - Lamé's Theorem
+
+Let $a$ and $b$ be positive integers with $a \ge b$. Let $n$ be the number of divisions used by [the Euclidean Algorithm](4%20Number%20Theory%20and%20Cryptography.md#The%20Euclidean%20Algorithm) to find $\gcd (a, b)$, then $n$ is at most $5$ times the number of decimal digits of $b$.
+
+
