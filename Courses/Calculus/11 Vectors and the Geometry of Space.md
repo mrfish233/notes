@@ -85,3 +85,6 @@ $$
 
 - [ ] Calculus 11.3 to 11.5
 
+## 11.6 Cylinders and Quadric Surfaces
+
+
