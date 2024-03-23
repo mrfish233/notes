@@ -9,14 +9,20 @@
 
 ## Japanese I 
 
-- [ ] #homework 習字本 🔽 
+- [x] #homework 習字本 🔽 ✅ 2024-03-23
 
 ## NCPC
 
-- [ ] #homework  NCPC Disjoint Set Questions 📅 2024-03-23 🔼 
+- [ ] #homework  NCPC Disjoint Set Questions 📅 2024-03-29 🔼 
 
 ## CP II
 
 - [ ] hw01 [🍅:: 5] 🔼 📅 2024-03-27 ^ojnz
 
+## English
 
+- [ ] TOEIC Pretest
+
+## Chinese
+
+- [ ] Video
