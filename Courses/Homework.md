@@ -2,7 +2,8 @@
 
 ## Calculus II
 
-- [ ] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-03-28
+- [ ] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-04-04
+- [x] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-03-28 ✅ 2024-03-24
 - [x] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-03-21 ✅ 2024-03-15
 - [x] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-03-14 ✅ 2024-03-08
 - [x] #homework 微積分習題 🔼 🔁 every week on Thursday 📅 2024-03-07 ✅ 2024-03-03 
@@ -17,12 +18,12 @@
 
 ## CP II
 
-- [ ] hw01 [🍅:: 6] 🔼 📅 2024-03-27 ^ojnz
+- [x] hw01 [🍅:: 6] 🔼 📅 2024-03-27 ✅ 2024-03-24 ^ojnz
 
 ## English
 
-- [ ] TOEIC Pretest
+- [x] TOEIC Pretest ✅ 2024-03-24
 
 ## Chinese
 
-- [ ] Video
+- [x] Video ✅ 2024-03-24
