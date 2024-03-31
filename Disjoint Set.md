@@ -1,6 +1,6 @@
----
-minScale: 0.8
----
+<style>
+svg[id^="mermaid-"] { width: 1000px; }
+</style>
 
 # Disjoint Set
 
@@ -63,7 +63,7 @@ graph TB
 8 --> 7
 8 -.-> 8
 
-linkStyle 8 stroke:#f00, stroke-width:3px;
+linkStyle 8 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -121,7 +121,7 @@ graph TB
 6 & 7 --> 4
 8 --> 5
 
-linkStyle 3 stroke:#f00, stroke-width:3px;
+linkStyle 3 stroke:#f00, stroke-width:2px;
 ```
 
 ---
@@ -152,7 +152,7 @@ graph TB
 8 --> 7
 8 -.-> 8
 
-linkStyle 8 stroke:#f00, stroke-width:3px;
+linkStyle 8 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -180,17 +180,17 @@ graph TB
 6 & 7 --> 4
 8 --> 5
 
-linkStyle 3 stroke:#f00, stroke-width:3px;
+linkStyle 3 stroke:#f00, stroke-width:2px;
 ```
 
 --
 
 ### Disjoint Set 互斥集
 
+俗稱 Merge-Find Set，中文「並查集」
+
 1. 集合之間沒有交集
 2. 需要合併、尋找功能
-
-俗稱 Merge-Find Set，中文「並查集」
 
 ---
 
@@ -202,7 +202,7 @@ Disjoint-sets Forest
 
 ### 存儲狀態
 
-```cpp=
+```cpp []
 int djset[9];
 
 djset[0] = 0; // 頭目
@@ -241,8 +241,8 @@ graph TB
 
 每個人都是自己一人一團，自己當老大
 
-```cpp=
-int djset[9];
+```cpp []
+int djset[9]; // 初始化並查集
 
 for (int i = 0; i < 9; i++) {
     djset[i] = i;
@@ -279,16 +279,14 @@ graph TB
 
 找誰在哪個團裡
 
-```cpp=
+```cpp []
 int find(int x) {
     if (djset[x] == x) {
         return x;
     }
-
     // 遞迴尋找頭目
     return find(djset[x]);
 }
-
 // find(7) = 1;
 ```
 
@@ -310,7 +308,7 @@ graph TB
 6 & 7 --> 4
 8 --> 5
 
-style 7 stroke:#f00, stroke-width:3px;
+style 7 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -319,16 +317,14 @@ style 7 stroke:#f00, stroke-width:3px;
 
 找誰在哪個團裡
 
-```cpp=
+```cpp []
 int find(int x) {
     if (djset[x] == x) {
         return x;
     }
-
     // 遞迴尋找頭目，同時將途中的小弟的老大設為頭目
     return djset[x] = find(djset[x]);
 }
-
 // find(7) = 1;
 ```
 
@@ -352,19 +348,18 @@ graph TB
 8 --> 5
 7 --> 1
 
-style 7 stroke:#f00, stroke-width:3px;
-linkStyle 9 stroke:#f00, stroke-width:3px;
+style 7 stroke:#f00, stroke-width:2px;
+linkStyle 9 stroke:#f00, stroke-width:2px;
 ```
 
 --
 
 ### 是否同團？
 
-```cpp=
+```cpp []
 bool same(int x, int y) {
     return (find(x) == find(y));
 }
-
 // same(7, 8) = true
 // same(7, 2) = false
 ```
@@ -387,25 +382,24 @@ graph TB
 6 & 7 --> 4
 8 --> 5
 
-style 7 stroke:#f00, stroke-width:3px;
-style 2 stroke:#00f, stroke-width:3px;
-style 8 stroke:#00f, stroke-width:3px;
+style 7 stroke:#f00, stroke-width:2px;
+style 2 stroke:#00f, stroke-width:2px;
+style 8 stroke:#00f, stroke-width:2px;
 ```
 
 --
 
 ### 合併
 
-```cpp=
+```cpp []
 void merge(int x, int y) {
     x = find(x);
     y = find(y);
 
     djset[x] = y;
 }
-
 // merge(2, 7) == merge(0, 1)
-// merge(2, 3) == merge(0, 0)
+// merge(4, 8) == merge(1, 1)
 ```
 
 ```mermaid
@@ -427,7 +421,7 @@ graph TB
 6 & 7 --> 4
 8 --> 5
 
-linkStyle 3 stroke:#f00, stroke-width:3px;
+linkStyle 3 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -441,13 +435,47 @@ linkStyle 3 stroke:#f00, stroke-width:3px;
 
 團體數量？各團體人數？
 
+```mermaid
+graph TB
+0((0))
+1((1))
+2((2))
+3((3))
+4((4))
+5((5))
+6((6))
+7((7))
+8((8))
+
+0 & 2 & 3 --> 0
+1 --> 1
+4 & 5 --> 1
+6 & 7 --> 4
+8 --> 5
+```
+
 --
 
 ### 合併 + 團體數量
 
-```cpp=
+1. 初始化新變數
+
+```cpp [2]
+int djset[9];
 int group = 9; // 初始團體數量
 
+for (int i = 0; i < 9; i++) {
+    djset[i] = i;
+}
+```
+
+--
+
+### 合併 + 團體數量
+
+2. 合併時更新團體數量
+
+```cpp [1,7-8]
 void merge(int x, int y) {
     x = find(x);
     y = find(y);
@@ -485,27 +513,28 @@ subgraph s2[group 2]
 8 --> 5
 end
 
-linkStyle 3 stroke:#f00, stroke-width:3px;
+linkStyle 3 stroke:#f00, stroke-width:2px;
 ```
 
 --
 
 ### 合併 + 各團體人數
 
-1. 初始化陣列
+1. 初始化新陣列
 
-```cpp=
+```cpp [2,7]
 int djset[9];
 int dsize[9]; // 各團體人數
+int group = 9;
 
-for (int i = 0; i < 8; i++) {
+for (int i = 0; i < 9; i++) {
     djset[i] = i;
     dsize[i] = 1;
 }
 ```
 
 ```mermaid=
-flowchart TD
+graph TB
 
 0((0))
 1((1))
@@ -534,17 +563,17 @@ flowchart TD
 
 2. 合併時更新人數
 
-```cpp=
+```cpp [1,10]
 void merge(int x, int y) {
     x = find(x);
     y = find(y);
 
     if (x == y) return;
 
-    dsize[y] += dsize[x]; // 團體 x 的人數加到團體 y 中
-
     group--;
-    djset[x] = y;
+	djset[x] = y;
+
+    dsize[y] += dsize[x]; // 團體 x 的人數加到團體 y 中
 }
 ```
 
@@ -555,7 +584,7 @@ void merge(int x, int y) {
 2. 合併時更新人數
 
 ```mermaid=
-graph TD
+graph TB
 
 0((0))
 1((1))
@@ -584,9 +613,9 @@ end
 
 2. 合併時更新人數
 
-```cpp=
-// merge(0, 1)
-dsize[y] += dsize[x];
+```cpp []
+	// merge(0, 1)
+	dsize[y] += dsize[x];
 ```
 
 ```mermaid=
@@ -616,7 +645,7 @@ subgraph s1[9]
 8 --> 5
 end
 
-linkStyle 3 stroke:#f00, stroke-width:3px;
+linkStyle 3 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -654,7 +683,7 @@ end
 
 3. 查詢團體人數
 
-```cpp=
+```cpp []
 int groupSize(int x) {
     return dsize[find(x)];
 }
@@ -691,7 +720,7 @@ style 0 stroke:#f00, stroke-width: 3px;
 
 ### 合併優化
 
-```cpp=
+```cpp [7-10]
 void merge(int x, int y) {
     x = find(x);
     y = find(y);
@@ -703,10 +732,9 @@ void merge(int x, int y) {
         swap(x, y);
     }
 
-    dsize[y] += dsize[x];
-
     group--;
     djset[x] = y;
+	dsize[y] += dsize[x];
 }
 ```
 
@@ -749,13 +777,13 @@ end
 subgraph s2[9]
 C & D --> A
 B --> A
-B --> B
+A --> A
 E & F --> B
 G & H --> E
 I --> F
 end
 
-linkStyle 2,11 stroke:#f00, stroke-width:3px;
+linkStyle 2,11 stroke:#f00, stroke-width:2px;
 ```
 
 --
@@ -797,7 +825,7 @@ https://vjudge.net/problem/CodeForces-1167C
 
 ### pA ABC
 
-```cpp=
+```cpp []
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -839,7 +867,7 @@ int main() {
 
 ### pB Simple Design
 
-```cpp=
+```cpp []
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -882,7 +910,7 @@ int main() {
 
 ### pE News Distribution
 
-```cpp=
+```cpp []
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -943,7 +971,7 @@ int main() {
             if (i == 0) {
                 tmp = x - 1;
             } else {
-                unite(tmp, x - 1);
+                merge(x - 1, tmp);
             }
         }
     }
