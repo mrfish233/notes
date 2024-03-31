@@ -14,7 +14,7 @@
 
 ## NCPC
 
-- [ ] #homework  NCPC Disjoint Set Questions 📅 2024-03-29 🔼 
+- [x] #homework  NCPC Disjoint Set Questions 🔼 📅 2024-03-29 ✅ 2024-03-30
 
 ## CP II
 
