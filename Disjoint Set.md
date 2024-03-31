@@ -1,3 +1,6 @@
+---
+minScale: 0.8
+---
 
 # Disjoint Set
 
