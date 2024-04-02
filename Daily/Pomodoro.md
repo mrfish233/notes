@@ -11,3 +11,4 @@
 - 🍅 (pomodoro::WORK) (duration:: 50m) (begin:: 2024-03-31 09:39) - (end:: 2024-03-31 10:29)
 - 🍅 (pomodoro::WORK) (duration:: 50m) (begin:: 2024-03-31 11:12) - (end:: 2024-03-31 12:02)
 - 🍅 (pomodoro::WORK) (duration:: 50m) (begin:: 2024-04-02 10:23) - (end:: 2024-04-02 11:13)
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2024-04-02 11:40) - (end:: 2024-04-02 12:05)
