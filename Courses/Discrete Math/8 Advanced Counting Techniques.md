@@ -83,3 +83,42 @@ a_{n} = \alpha_{1} r_{0}^{n} + \alpha_{2} n r_{0}^{n},
 $$
 
 where $\alpha_{1}, \alpha_{2}$ are constants.
+
+## 8.4 Generating Functions
+
+### Definition 2 - Generating Function
+
+The **generating function** for the sequence $a_{0}, a_{1}, a_{2}, \cdots, a_{k}, \cdots$ of real numbers is the infinite series
+
+$$
+G(x) = a_{0} + a_{1}x + a_{2}x^{2} + \cdots + a_{k}x^{k} + \cdots
+= \sum\limits_{k=0}^{\infty} a_{k} x^{k}.
+$$
+
+The generating function for $\{a_{k}\}$ is sometimes called the **ordinary generating function** of $\{a_{k}\}$ to distinguish it from other types of generating functions for this sequence.
+
+### Theorem 3 - Addition and Multiplication
+
+Let $f(x) = \sum\limits_{k=0}^{\infty} a_{k}x^{k}$ and $g(x) = \sum\limits_{k=0}^{\infty} b_{k}x^{k}$. Then
+
+$$
+f(x) + g(x) = \sum\limits_{k=0}^{\infty} (a_{k} + b_{k})x^{k}
+$$
+
+and
+
+$$
+f(x)g(x) = \sum\limits_{k=0}^{\infty} \left( \sum\limits_{j=0}^{k} a_{j} b_{k-j} \right) x^{k}.
+$$
+
+### Definition 3 - Extended binomial coefficient
+
+Let $u$ be a real number and $k$ a nonnegative integer. Then the **extended binomial coefficient** $\binom{u}{k}$ is defined by
+
+$$
+\binom{u}{k} =
+\begin{cases}
+\frac{u (u-1) (u-2) \cdots (u-k+1)}{k!}, &\quad k \ge 0 \\
+1, &\quad k = 0.
+\end{cases}
+$$
