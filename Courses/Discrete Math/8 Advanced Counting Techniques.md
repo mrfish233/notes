@@ -132,3 +132,18 @@ $$
 $$
 
 This theorem can be proved using the theory of [Maclaurin Series](9%20Infinite%20Sequences%20and%20Series.md#Definition%209%20-%20Taylor%20and%20Maclaurin%20Series|Maclaurin%20Series).
+
+### Useful Generating Function
+
+$$
+\begin{align}
+\frac{1}{1-x} &= \sum\limits_{k=0}^{\infty} x^{k}
+= 1 + x + x^{2} + \cdots \\
+\frac{1}{1-ax} &= \sum\limits_{k=0}^{\infty} a^{k} x^{k}
+= 1 + ax + a^{2}x^{2} + \cdots \\
+\frac{1}{(1-x)^{n}} &= \sum\limits_{k=0}^{\infty} C(n+k-1, k) x^{k}
+= 1 + C(n, 1) x + C(n+1, 2) x^{2} + \cdots
+\end{align}
+$$
+
+
