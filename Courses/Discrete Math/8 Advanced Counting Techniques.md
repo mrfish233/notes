@@ -118,7 +118,17 @@ Let $u$ be a real number and $k$ a nonnegative integer. Then the **extended bino
 $$
 \binom{u}{k} =
 \begin{cases}
-\frac{u (u-1) (u-2) \cdots (u-k+1)}{k!}, &\quad k \ge 0 \\
+\displaystyle\frac{u (u-1) (u-2) \cdots (u-k+1)}{k!}, &\quad k \ge 0 \\
 1, &\quad k = 0.
 \end{cases}
 $$
+
+### Theorem 4 - The Extended Binomial Theorem
+
+Let $x$ be a real number with $|x| < 1$ and let $u$ be a real number. Then
+
+$$
+(1+x)^{u} = \sum\limits_{k=0}^{\infty} \binom{u}{k} x^{k}.
+$$
+
+This theorem can be proved using the theory of [Maclaurin Series](9%20Infinite%20Sequences%20and%20Series.md#Definition%209%20-%20Taylor%20and%20Maclaurin%20Series|Maclaurin%20Series).
