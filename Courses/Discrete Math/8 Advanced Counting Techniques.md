@@ -142,7 +142,11 @@ $$
 \frac{1}{1-ax} &= \sum\limits_{k=0}^{\infty} a^{k} x^{k}
 = 1 + ax + a^{2}x^{2} + \cdots \\
 \frac{1}{(1-x)^{n}} &= \sum\limits_{k=0}^{\infty} C(n+k-1, k) x^{k}
-= 1 + C(n, 1) x + C(n+1, 2) x^{2} + \cdots
+= 1 + C(n, 1) x + C(n+1, 2) x^{2} + \cdots \\
+e^{x}&= \sum\limits_{k=0}^{\infty} \frac{x^{k}}{k!}
+= 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots \\
+\ln(1+x) &= \sum\limits_{k=1}^{\infty} \frac{(-1)^{k+1}}{k} x^{k}
+= x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4} + \cdots
 \end{align}
 $$
 
