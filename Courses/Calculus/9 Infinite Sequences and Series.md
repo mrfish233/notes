@@ -626,7 +626,7 @@ If $f$ and its first $n$ derivatives $f', f'', \cdots, f^{(n)}$ are continuous o
 $$
 \begin{align}
 f(b) = f(a) &+ f'(a)(b-a) + \frac{f''(a)}{2!} (b-a)^{2} + \cdots \\
-&+ \frac{f^{(n)}(a)}{n!} (b-a)^{n} + \frac{f^{(n+1)}(a)}{(n+1)!} (b-a)^{n+1}
+&+ \frac{f^{(n)}(a)}{n!} (b-a)^{n} + \frac{f^{(n+1)}(c)}{(n+1)!} (b-a)^{n+1}
 \end{align}
 $$
 
