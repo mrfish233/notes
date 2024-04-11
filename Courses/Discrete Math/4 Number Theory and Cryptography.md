@@ -12,7 +12,7 @@ $$
 
 When $a$ divides $b$, $a$ is a **factor** or **divisor** of $b$, and that $b$ is a multiple of $a$. The notation of $a$ divides $b$ is $a \mid b$, and we write $a \not \mid b$ when $a$ does not divide $b$.
 
-### Theorem 1
+### Theorem 1 - Properties of Divisibility of Integers
 
 Let $a, b, c$ be integers, where $a \ne 0$. Then
 
@@ -42,6 +42,19 @@ $$
 
 Therefore $a$ divides $c$.
 
+
+#### Corollary 1
+
+If $a, b, c$ are integers, where $a \ne 0$, such that $a \mid b$ and $a \mid c$, then $a \mid mb + nc$ whenever $m, n$ are integers.
+
+**Proof**:
+
+By [part (ii) of Theorem 1](#Theorem%201%20-%20Properties%20of%20Divisibility%20of%20Integers), we see that $a \mid mb$ and $a \mid nc$ for $m, n \in \mathbb{Z}$. Then by [[#Theorem 1 - Properties of Divisibility of Integers|part (i) of Theorem 1]], it follows that
+
+$$
+a \mid mb + nc.
+$$
+
 ### Theorem 2 - The Division Algorithm
 
 Let $a$ be an integer and $d$ a positive integer. Then there are unique integers $q, r$ with $0 \le r < d$, such that
@@ -50,7 +63,7 @@ $$
 a = dq + r.
 $$
 
-### Definition 2
+### Definition 2 - The Division Algorithm
 
 In the [Division Algorithm](#Theorem%202%20-%20The%20Division%20Algorithm), $d$ is called the **divisor**, $a$ is called the **dividend**, $q$ is called the **quotient**, and $r$ is called the **remainder**. The notation
 

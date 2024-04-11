@@ -47,15 +47,80 @@ $$
 x \in \emptyset \to x \in S
 $$
 
-is always true by definition of [](1%20The%20Foundations%20-%20Logic%20and%20Proofs.md#Definition%205%20-%20Implication|implications).
+is always true by definition of [implications](1%20The%20Foundations%20-%20Logic%20and%20Proofs.md#Definition%205%20-%20Implication).
 
 $\text{(ii)}$ To show that $S \subseteq S$, we must show that $\forall x (x \in S \to x \in S)$ is true. Then
 
 | $x \in S$ | $x \in S \to x \in S$ |
 | --------- | --------------------- |
 | T         | T                     |
-| F         | T                      |
+| F         | T                     |
 
 Therefore $S \subseteq S$ is **true**.
 
+### Definition 4 - Finite Set and Infinite Set
+Let $S$ be a set. If there are exactly $n$ district elements in $S$ where $n$ is an nonnegative integer, we say that $S$ is a **finite set** and $n$ in the **cardinality** of $S$. The cardinality of $S$ is denoted by $|S|$.
 
+A set is said to be **infinite** if it is not finite.
+
+### Definition 5 - Power Sets
+
+Given a set $S$, the **power set** of $S$ is the set of all subsets of the set $S$. The power set of $S$ is denoted by $\mathcal{P}(S)$.
+
+### Definition 6 - Ordered n-tuple
+
+The **ordered n-tuple** $(a_{1}, a_{2}, \cdots, a_{n})$ is the ordered collection that has $a_{1}$ as its first element, $a_{2}$ as its second element, $\cdots$, and $a_{n}$ as its $nth$ element.
+
+### Definition 7 - Cartesian Products
+
+Let $A$ and $B$ be sets. The **Cartesian product** of $A$ and $B$, denoted by $A \times B$, is
+
+$$
+A \times B = \set{(a, b) \mid a \in A \land b \in B}
+$$
+
+## 2.2 Set Operations
+
+### Definition 8 - Union of Set
+
+Let $A$ and $B$ be sets. The **union** of the sets $A$ and $B$, denoted by $A \cup B$, is the sets that contains elements in either $A$ or $B$.
+
+### Definition 9 - Intersection of Set
+
+Let $A$ and $B$ be sets. The **intersection** of the sets $A$ and $B$, denoted by $A \cap B$, is the sets that contains elements in both $A$ or $B$.
+
+### Definition 10 - Disjoint of Set
+
+Two sets are called **disjoint** if their intersection is the empty set.
+
+### Definition 11 - Difference of Set
+
+Let $A$ and $B$ be sets. The **difference** of $A$ and $B$, denoted by $A - B$, is the set containing those elements that are in $A$ but not in $B$. It is also called the **complement of $B$ with respect to $A$**.
+
+### Definition 12 - Complement of Set
+
+Let $U$ be the universal set. The **complement** of the set $A$, denoted by $\bar{A}$, is $U - A$.
+
+### Definition 13 - Union of Collection of Sets
+
+The **union** of a collection of sets is the set that contains those elements that are members of at lease one set in the collection.
+
+We use the notation
+
+$$
+A_{1} \cup A_{2} \cup \cdots \cup A_{n} = \bigcup_{i=1}^{n} A_{i}
+$$
+
+to denote the union of the sets $A_{1}, A_{2}, \cdots, A_{n}$.
+
+### Definition 14 - Intersection of Collection of Sets
+
+The **intersection** of a collection of sets is the set that contains those elements that are members of all the sets in the collection.
+
+We use the notation
+
+$$
+A_{1} \cap A_{2} \cap \cdots \cap A_{n} = \bigcap_{i=1}^{n} A_{i}
+$$
+
+to denote the intersection of the sets $A_{1}, A_{2}, \cdots, A_{n}$.
