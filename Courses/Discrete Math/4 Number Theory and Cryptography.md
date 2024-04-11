@@ -226,7 +226,7 @@ This is used to find all primes not exceeding a specified positive integer. It d
 
 ### Theorem 8 - Euclid's Theorem
 
-There are infinitely many primes.
+There are **infinitely many** primes.
 
 **Proof:**
 
@@ -242,7 +242,7 @@ By [Theorem 6 - The Fundamental Theorem of Arithmetic](#Theorem%206%20-%20The%20
 - If $Q$ is prime, then there is at lease one or more prime that is not in the list $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$, namely, $Q$ itself.
 - If $Q$ is not prime, then there exists $p_{j}$ is a prime factor of $Q$. $p_j$ can't be any of $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$ since $Q$ has remainder of $1$ when divided by each $p_i$. Therefore $p$ is a prime not on our list.
 
-Hence, there is a prime not in the list $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$ in both cases above. This is a **contradiction** because we assume that we have listed all the primes. Consequently, there are infinitely many primes.
+Hence, there is a prime not in the list $p_{1}, p_{2}, p_{3}, \cdots, p_{n}$ in both cases above, namely $Q$ in first case and $p_{j}$ in second case. This is a **contradiction** because we assume that we have listed all the primes. Consequently, there are infinitely many primes.
 
 ### Theorem 9 - The Prime Number Theorem
 
