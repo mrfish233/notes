@@ -13,3 +13,107 @@ $$
 to each element in $D$. The set $D$ is the function's **domain**. The set of $w$-values taken on by $f$ is the function's **range**.
 
 $w$ is the **dependent variable** of $f$, and $f$ is the function of the $n$ **independent variables** $x_{1}$ to $x_{n}$.
+
+### Definition 2 - Interior Points and Boundary Points
+
+A point $(x_{0}, y_{0})$ in a region $R$ in the $xy$-plane is an **interior point** of $R$ if it is the center of a disk of positive radius that lies entirely in $R$. A point is a **boundary point** of $R$ if every disk centered at $(x_{0}, y_{0})$ contains points that lie outside of $R$ as well as points that lie in $R$.
+
+The interior points of a region, as a set, make up the **interior** of the region. The region's boundary points make up its **boundary**. A region is **open** if it consists entirely of interior points. A region is **closed** if it contains all its boundary points.
+
+### Definition 3 - Bounded and Unbounded Region
+
+A region in the plane is **bounded** if it lies inside a disk of finite radius. A region is **unbounded** if it is not bounded.
+
+### Definition 4 - Graphs and Curves
+
+The set of points in the plane where a function $(x, y)$ has a constant value
+
+$$
+z = f(x,y)
+$$
+
+is called a **level curve** of $f$. The set of all points
+
+$$
+(x, y, f(x,y))
+$$
+
+in space, for $(x,y)$ in the domain of $f$, is called the **graph** of $f$.
+
+The graph of $f$ is often called the **surface** $z = f(x,y)$.
+
+## 13.2 Limits and Continuity in Higher Dimensions
+
+### Definition 6 - Limits for Functions of Two Variables
+
+Suppose that every open circular disk centered at $(x_{0}, y_{0})$ contains a point in the domain of $f$ other than $(x_{0}, y_{0})$ itself. If for every number $\varepsilon > 0$, there exists a corresponding number $\delta > 0$ such that
+
+$$
+\forall (x,y) \in D, \quad |f(x,y) - L| < \varepsilon \quad
+\text{whenever} \quad
+0 < \sqrt{(x-x_{0})^{2} + (y-y_{0})^{2}} < \delta,
+$$
+
+then we say that a function $f(x,y)$ approaches the **limit** $L$ as $(x,y)$ approaches $(x_{0}, y_{0})$, and write
+
+$$
+\lim_{(x,y) \to (x_{0},y_{0})} f(x,y) = L.
+$$
+
+### Theorem 1 - Properties of Limits of Functions of Two Variables
+
+If $L, M, k$ are real numbers and
+
+$$
+\lim_{(x,y) \to (x_{0},y_{0})} f(x,y) = L
+\quad \text{and} \quad
+\lim_{(x,y) \to (x_{0},y_{0})} g(x,y) = M.
+$$
+
+Then
+
+$$
+\begin{align}
+1. &\text{Sum Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} [f(x,y) + g(x,y)] = L + M \\
+2. &\text{Difference Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} [f(x,y) - g(x,y)] = L - M \\
+3. &\text{Constant Multiple Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} [k \cdot f(x,y)] = kL \\
+4. &\text{Product Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} [f(x,y) \cdot g(x,y)] = L \cdot M \\
+5. &\text{Quotient Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} \frac{f(x,y)}{g(x,y)} = \frac{L}{M}, \quad M \ne 0 \\
+6. &\text{Power Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} [f(x,y)]^{n} = L^{n}, \quad n \in \mathbb{Z}^{+} \\
+7. &\text{Root Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} \sqrt[n]{f(x,y)}  = \sqrt[n]{L}, \quad n \in \mathbb{Z}^{+} \\
+8. &\text{Composition Rule: } \quad &&\lim_{(x,y) \to (x_{0},y_{0})} h(f(x,y))  = h(L).\\
+\end{align}
+$$
+
+Note in rule 7: if $n$ is even, we assume that $L > 0$.
+Note in rule 8: $h(z)$ is continuous at $z = L$.
+
+### Definition 7 - Continuity of Functions
+
+Suppose that every open circular disk centered at $(x_{0}, y_{0})$ contains a point in the domain of $f$ other than $(x_{0}, y_{0})$ itself. Then a function $f(x, y)$ is **continuous at the point** $(x_{0}, y_{0})$ if $f$ is defined at $(x_{0}, y_{0})$, and
+
+$$
+\lim_{(x,y) \to (x_{0},y_{0})} f(x,y) = f(x_{0}, y_{0}).
+$$
+
+A function is **continuous** if it is continuous at every point of its domain.
+
+### Two-Path Test for Nonexistence of a Limit
+
+If a function $f(x,y)$ has different limits along two different paths in the domain of $f$ as $(x,y)$ approaches $(x_{0}, y_{0})$, then the following limit **does not exist**:
+
+$$
+\lim_{(x,y) \to (x_{0},y_{0})} f(x,y)
+$$
+
+Having the same limit along all straight lines approaching $(x_{0}, y_{0})$ does not imply that a limit exists at $(x_{0}, y_{0})$.
+
+### Continuity of Compositions
+
+If $f$ is continuous at $(x_{0}, y_{0})$ and $g$ is a single-variable function continuous at $f(x_{0}, y_{0})$, then the composition $h = g \circ f$ defined by
+
+$$
+h(x,y) = g(f(x,y))
+$$
+
+is also continuous at $(x_{0}, y_{0})$.
