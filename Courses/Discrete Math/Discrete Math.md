@@ -15,4 +15,5 @@ Kenneth Rosen - Discrete Mathematics and Its Applications - 8th edition
 - [2 Basic Structures - Sets](2%20Basic%20Structures%20-%20Sets.md)
 - [4 Number Theory and Cryptography](4%20Number%20Theory%20and%20Cryptography.md)
 - [5 Induction and Recursion](5%20Induction%20and%20Recursion.md)
+- [6 Counting](6%20Counting.md)
 - [8 Advanced Counting Techniques](8%20Advanced%20Counting%20Techniques.md)
