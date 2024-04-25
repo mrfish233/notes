@@ -117,3 +117,39 @@ h(x,y) = g(f(x,y))
 $$
 
 is also continuous at $(x_{0}, y_{0})$.
+
+## 13.3 Partial Derivatives
+
+### Definition 8 - Partial Derivative
+
+The **partial derivative** of $f(x,y)$ with respect to $x$ at the point $(x_{0}, y_{0})$ is
+
+$$
+\left. \frac{\delta f}{\delta x} \right |_{(x_{0}, y_{0})} =
+\left. \frac{d}{dx} f(x, y_{0}) \right |_{x = x_{0}} =
+\lim_{h \to 0} \frac{f(x_{0} + h, y_{0}) - f(x_{0}, y_{0})}{h},
+$$
+
+provided the limit exists.
+
+### Theorem 2 - The Mixed Derivative Theorem
+
+If $f(x, y)$ and its partial derivatives $f_{x}, f_{y}, f_{xy}, f_{yx}$ are defined throughout an open region containing a point $(a, b)$ and are all **continuous** at $(a, b)$, then
+
+$$
+f_{xy}(a, b) = f_{yx}(a, b).
+$$
+
+**Note:** the order of mixed partial derivatives are defined as below:
+
+$$
+\frac{\delta^{2}f}{\delta x \delta y} = 
+\frac{\delta}{\delta x} \left(\frac{\delta f}{\delta y}\right) =
+f_{yx} = (f_{y})_{x},
+$$
+
+means differentiate **first** with respect to $y$, then with respect with $x$.
+
+### Definition 9 - Differentiability
+
+A function $z = f(x, y)$ is **differentiable at** $(x_{0}, y_{0})$ if $f_{x}(x_{0}, y_{0})$ and $f_{y}(x_{0}, y_{0})$
