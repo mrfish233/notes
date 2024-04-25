@@ -134,7 +134,7 @@ provided the limit exists.
 
 ### Theorem 2 - The Mixed Derivative Theorem
 
-If $f(x, y)$ and its partial derivatives $f_{x}, f_{y}, f_{xy}, f_{yx}$ are defined throughout an open region containing a point $(a, b)$ and are all **continuous** at $(a, b)$, then
+If $f(x, y)$ and its partial derivatives $f_{x}, f_{y}, f_{xy}, f_{yx}$ are **defined** throughout an open region containing a point $(a, b)$ and are all **continuous** at $(a, b)$, then
 
 $$
 f_{xy}(a, b) = f_{yx}(a, b).
@@ -152,4 +152,81 @@ means differentiate **first** with respect to $y$, then with respect with $x$.
 
 ### Definition 9 - Differentiability
 
-A function $z = f(x, y)$ is **differentiable at** $(x_{0}, y_{0})$ if $f_{x}(x_{0}, y_{0})$ and $f_{y}(x_{0}, y_{0})$
+A function $z = f(x, y)$ is **differentiable at** $(x_{0}, y_{0})$ if $f_{x}(x_{0}, y_{0})$ and $f_{y}(x_{0}, y_{0})$ exist and $\Delta z = f(x_{0} + \Delta x, y_{0} + \Delta y) - f(x_{0}, y_{0})$ satisfies an equation of the form
+
+$$
+\Delta z = f_{x}(x_{0}, y_{0}) \Delta x + f_{y}(x_{0}, y_{0}) \Delta y + \varepsilon_{1} \Delta x + \varepsilon_{2} \Delta y,
+$$
+
+in which $\varepsilon_{1}, \varepsilon_{2} \to 0$ as $\Delta x, \Delta y \to 0$. We call $f$ **differentiable** if it is differentiable at every point in its domain, and say that its graph is a smooth curve.
+
+### Theorem 3 - The Increment Theorem
+
+Suppose $f_{x}, f_{y}$ are defined throughout an open region $R$ containing the point $(x_{0}, y_{0})$ and that $f_{x}, f_{y}$ are continuous at $(x_{0}, y_{0})$, then the change
+
+$$
+\Delta z = f(x_{0} + \Delta x, y_{0} + \Delta y) - f(x_{0}, y_{0})
+$$
+
+in the value of $f$ that results from moving from $(x_{0}, y_{0})$ to another point $(x_{0} + \Delta x, y_{0} + \Delta y)$ in $R$ satisfies an equation of the form
+
+$$
+\Delta z = f_{x}(x_{0}, y_{0}) \Delta x + f_{y}(x_{0}, y_{0}) \Delta y + \varepsilon_{1} \Delta x + \varepsilon_{2} \Delta y
+$$
+
+in which $\varepsilon_{1}, \varepsilon_{2} \to 0$ as $\Delta x, \Delta y \to 0$.
+
+#### Corollary 3
+
+If the partial derivatives $f_x$ and $f_y$ of a function $f(x, y)$ are continuous throughout an open region $R$, then $f$ is **differentiable** at every point of $R$.
+
+### Theorem 4 - Differentiability Implies Continuity
+
+If a function $f(x, y)$ is differentiable at $(x_{0}, y_{0})$, then $f$ is **continuous** at $(x_{0}, y_{0})$.
+
+## 13.4 Chain Rule
+
+### Theorem 5 - Chain Rule
+
+For functions of 1 independent variable and 2 intermediate functions:
+
+If $z = f(x, y)$ is differentiable and if $x = x(t), y = y(t)$ are differentiable functions of $t$, then the composition $z = f(x(t), y(t))$ is a differentiable function of $t$ and
+
+$$
+\begin{align}
+\frac{dz}{dt} &= f_{x}(x(t), y(t)) x'(t) + f_{y}(x(t), y(t)) y'(t) \\
+&= \frac{\delta f}{\delta x} \frac{dx}{dt} + \frac{\delta f}{\delta y} \frac{dy}{dt}.
+\end{align}
+$$
+
+### Theorem 8 - Implicit Differentiation
+
+Suppose that $F(x, y)$ is differentiable and that the equation $F(x, y) = 0$ defines $y$ as a differentiable function of $x$, then at any point where $F_{y} \ne 0$,
+
+$$
+\frac{dy}{dx} = - \frac{F_{x}}{F_{y}}.
+$$
+
+**Proof:**
+
+Let $w = F(x, h(x))$ where $y = h(x)$, then since $F(x, h(x)) = 0$, we have
+
+$$
+\frac{dw}{dx} = F_{x} \frac{dx}{dx} + F_{y} \frac{dy}{dx} = 0.
+$$
+
+If $F_{y} \ne 0$, then
+
+$$
+\frac{dy}{dx} = - \frac{F_{x}}{F_{y}}.
+$$
+
+**Example:** $y^{2} - x^{2} - \sin{xy} = 0$.
+
+Let $F(x,y) = y^{2} - x^{2} - \sin{xy}$, then
+
+$$
+\frac{dy}{dx} = - \frac{F_{x}}{F_{y}}
+= - \frac{-2x - y \cos{xy}}{2y - x \cos{xy}}
+= \frac{2x + y \cos{xy}}{2y - x \cos{xy}}
+$$
