@@ -230,3 +230,193 @@ $$
 = - \frac{-2x - y \cos{xy}}{2y - x \cos{xy}}
 = \frac{2x + y \cos{xy}}{2y - x \cos{xy}}
 $$
+
+## 13.5 Directional Derivatives and Gradient Vectors
+
+### Definition 10 - Directional Derivative
+
+The derivative of $f$ at $P_{0}(x_{0}, y_{0})$ in the direction of the unit vector $\mathbf{u} = u_{1} \mathbf{i} + u_{2} \mathbf{j}$ is the number
+
+$$
+\left(\frac{df}{ds}\right)_{\mathbf{u}, \ P_{0}} =
+\lim_{s \to 0} \frac{f(x_{0} + su_{1}, y_{0} + su_{2}) - f(x_{0}, y_{0})}{s},
+$$
+
+provided the limit exists. The **directional derivative** is also defined by
+
+$$
+D_{\mathbf{u}} f(P_{0}) \quad \text{or} D_{\mathbf{u}}f |_{P_{0}}
+$$
+
+**Example:** find the derivative of
+
+$$
+f(x, y) = x^{2} + xy
+$$
+
+at $P_{0}(1, 2)$ in the direction of the unit vector $\mathbf{u} = (1/\sqrt{2})\mathbf{i} + (1/\sqrt{2})\mathbf{j}.$
+
+$$
+\begin{align}
+\left(\frac{df}{ds}\right)_{\mathbf{u}, \ P_{0}} &=
+\lim_{s \to 0} \frac{f(x_{0} + su_{1}, y_{0} + su_{2}) - f(x_{0}, y_{0})}{s} \\
+&= \lim_{s \to 0} \frac{f\left(1 + \frac{s}{\sqrt{2}}, 2 + \frac{s}{\sqrt{2}}\right) - f(1, 2)}{s} \\
+&= \cdots \\
+&= \lim_{s \to 0} \left(\frac{5}{\sqrt{2}} + s\right) \\
+&= \frac{5}{\sqrt{2}}.
+\end{align}
+$$
+
+### Definition 11 - Gradient Vector
+
+The **gradient vector** (or **gradient**) of $f(x, y)$ is the vector
+
+$$
+\nabla f = \frac{\delta f}{\delta x} \mathbf{i} + \frac{\delta f}{\delta y} \mathbf{j}.
+$$
+
+The value of the gradient vector obtained by evaluating the partial derivatives at a point $P_{0} (x_{0}, y_{0})$ is written
+
+$$
+\nabla f \mid_{P_{0}} \quad \text{or} \quad \nabla f(x_{0}, y_{0}).
+$$
+
+### Theorem 9 - Directional Derivative is a Dot Product
+
+If $f(x, y)$ is differentiable in an open region containing $P_{0}(x_{0}, y_{0})$, then
+
+$$
+\left(\frac{df}{ds}\right)_{\mathbf{u}, \ P_{0}} =
+\nabla f \mid_{P_{0}} \cdot \mathbf{u}.
+$$
+
+**Example:** find the derivative of $f(x, y) = xe^{y} + \cos{xy}$ at the point $(2, 0)$ in the direction of $\mathbf{v} = 3 \mathbf{i} + 4 \mathbf{j}$.
+
+We have
+
+$$
+\mathbf{u} = \frac{\mathbf{v}}{|\mathbf{v}|} = \frac{\mathbf{v}}{5} =
+\frac{3}{5} \mathbf{i} - \frac{4}{5} \mathbf{j}.
+$$
+
+And the partial derivatives of $f$ at $(2, 0)$ are
+
+$$
+\begin{align}
+f_{x}(2, 0) &= \left. (e^{y} - y \sin xy) \right|_{(2, 0)} = 1 \\
+f_{y}(2, 0) &= \left. (x e^{y} - x \sin xy) \right|_{(2, 0)} = 2
+\end{align}
+$$
+
+The gradient of $f$ at $(2, 0)$ is
+
+$$
+\nabla f |_{(2, 0)} = f_{x}(2, 0) \mathbf{i} + f_{y} (2, 0) \mathbf{j} = \mathbf{i} + 2\mathbf{j}
+$$
+
+Therefore the derivative of $f$ at $(2, 0)$ in direction of $\mathbf{v}$ is
+
+$$
+\begin{align}
+D_{\mathbf{u}}f|_{(2, 0)} &= \nabla f|_{(2, 0)} 
+\cdot \mathbf{u} \\
+&= (\mathbf{i} + 2\mathbf{j}) \cdot \left(\frac{3}{5} \mathbf{i} - \frac{4}{5} \mathbf{j}\right) \\
+&= \frac{3}{5} - \frac{8}{5} \\
+&= -1.
+\end{align}
+$$
+
+### Properties of the Directional Derivative
+
+$$
+D_{\mathbf{u}}f = \nabla f \cdot \mathbf{u}
+= | \nabla f | | \mathbf{u} | \cos \theta
+= | \nabla f | \cos \theta
+$$
+
+1. The function $f$ **increases most rapidly** when $\cos \theta = 1$, or $\theta = 0$. That is, $f$ increases most rapidly in the direction of the gradient vector $\nabla f$ at $P$. The derivative in this direction is
+
+$$
+D_{\mathbf{u}}f = | \nabla f | \cos 0 = | \nabla f |.
+$$
+
+2. The function $f$ **decreases most rapidly** in the direction of $- \nabla f$. The derivative in this direction is
+
+$$
+D_{\mathbf{u}}f = | \nabla f | \cos \pi = | \nabla f |.
+$$
+
+3. Any direction $\mathbf{u}$ orthogonal to a gradient $\nabla f \ne 0$ is a direction of zero change in $f$ because $\theta = \displaystyle\frac{\pi}{2}$ and
+
+$$
+D_{\mathbf{u}}f = | \nabla f | \cos \frac{\pi}{2} = 0.
+$$
+
+### Equation for the Tangent Line to a Level Curve
+
+$$
+f_{x} (x_{0}, y_{0}) (x - x_{0}) + f_{y} (x_{0}, y_{0}) (y - y_{0}) = 0
+$$
+
+**Example:** find an equation for the tangent to the ellipse
+
+$$
+f(x, y) = \frac{x^{2}}{4} + y^{2}
+$$
+
+at the point $(-2, 1)$.
+
+The gradient of $f$ at $(-2, 1)$ is
+
+$$
+\nabla f |_{(-2, 1)} = \left. \left(\frac{x}{2} \mathbf{i} + 2y \mathbf{j}\right) \right|_{(-2, 1)} = -\mathbf{i} + 2\mathbf{j}
+$$
+
+Because this gradient vector is nonzero, the tangent to the ellipse at $(-2, 1)$ is the line
+
+$$
+\begin{align}
+f_{x}(-2, 1) (x + 2) + f_{y}(-2, 1) (x - 1) &= 0 \\
+x - 2y &= 4.
+\end{align}
+$$
+
+### Algebra Rules for Gradients
+
+$$
+\begin{align}
+1. &\text{Sum Rule: } \quad &&\nabla (f + g) &&= \nabla f + \nabla g \\
+2. &\text{Difference Rule: } \quad &&\nabla (f - g) &&= \nabla f - \nabla g \\
+3. &\text{Constant Multiple Rule: } \quad &&\nabla (kf) &&= k \nabla f \\
+4. &\text{Product Rule: } \quad &&\nabla (fg) &&= f \nabla g + g \nabla f \\
+5. &\text{Quotient Rule: } \quad &&\nabla \left(\frac{f}{g}\right) &&= \frac{g \nabla f - f \nabla g}{g^{2}} \\
+\end{align}
+$$
+
+## 13.6 Tangent Planes and Differentials
+
+### Definition 12 - Tangent Plane
+
+The **tangent plane** to the level surface $f(x, y, z) = c$ of a differentiable function $f$ at a point $P_{0}$ where the gradient is not zero is the plane through $P_{0}$ normal to $\nabla f |_{P_{0}}$. The tangent plane to $f(x,y,z) = c$ at $P_{0}(x_{0}, y_{0}, z_{0})$ is
+
+$$
+f_{x}(P_{0})(x - x_{0}) + f_{y}(P_{0})(y - y_{0}) + f_{z}(P_{0})(z - z_{0}) = 0.
+$$
+
+The **normal line** of the surface at $P_{0}$ is the line through $P_{0}$ parallel to $\nabla f |_{P_{0}}$. The normal line to $f(x,y,z) = c$ at $P_{0}(x_{0}, y_{0}, z_{0})$ is
+
+$$
+x = x_{0} + f_{x}(P_{0})t,
+\quad y = y_{0} + f_{y}(P_{0})t,
+\quad z = z_{0} + f_{z}(P_{0})t.
+$$
+
+### Plane Tangent to Surface $z = f(x,y)$
+
+The plane tangent to the surface $z = f(x,y)$ of a differentiable function $f$ at the point $P_{0}(x_{0}, y_{0}, f(x_{0}, y_{0}))$ is
+
+$$
+f_{x}(x_{0}, y_{0})(x - x_{0}) + f_{y}(x_{0}, y_{0})(y - y_{0}) - (z - z_{0}) = 0.
+$$
+
+
