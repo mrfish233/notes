@@ -419,4 +419,84 @@ $$
 f_{x}(x_{0}, y_{0})(x - x_{0}) + f_{y}(x_{0}, y_{0})(y - y_{0}) - (z - z_{0}) = 0.
 $$
 
+### Estimating the Change in $f$ in Direction $u$
+
+To estimate the change in function $f$ when moving a small distance $ds$ from a point $P_{0}$ in a particular direction $\mathbf{u}$,
+
+$$
+df = (\nabla f |_{P_{0}} \cdot \mathbf{u}) \ ds
+$$
+
+**Example:** $f(x,y,z) = y \sin x + 2yz$, from $P_{0}(0,1,0)$ to $P_{1}(2,2,-2)$, moves $0.1$ unit.
+
+Since
+
+$$
+\overrightarrow{P_{0}P_{1}} = 2 \mathbf{i} + \mathbf{j} - 2 \mathbf{k},
+$$
+
+the unit vector is
+
+$$
+\mathbf{u} = \frac{\overrightarrow{P_{0}P_{1}}}{|\overrightarrow{P_{0}P_{1}}|} = \frac{2}{3} \mathbf{i} + \frac{1}{3} \mathbf{j} - \frac{2}{3} \mathbf{k}. 
+$$
+
+The gradient of $f$ at $P_{0}$ is
+
+$$
+\nabla f |_{(0,1,0)} = ((y \cos x) \mathbf{i} + (\sin x + 2z) \mathbf{j} + 2y \mathbf{k}) |_{(0,1,0)} = \mathbf{i} + 2\mathbf{k}.
+$$
+
+Therefore
+
+$$
+\nabla f |_{P_{0}} \cdot \mathbf{u} = (\mathbf{i} + 2\mathbf{k}) \cdot \left(\frac{2}{3} \mathbf{i} + \frac{1}{3} \mathbf{j} - \frac{2}{3} \mathbf{k}\right) = -\frac{2}{3}.
+$$
+
+The change $df$ is approximately
+
+$$
+df = \left(- \frac{2}{3}\right) (ds) \approx -0.067 \ \text{unit}.
+$$
+
+### Definition 13 - Linearization
+
+The **linearization** of a function $f(x,y)$ at a point $(x_{0}, y_{0})$ where $f$ is differentiable is the function
+
+$$
+L(x,y) = f(x_{0}, y_{0}) + f_{x}(x_{0}, y_{0})(x - x_{0}) + f_{y}(x_{0}, y_{0})(y - y_{0}).
+$$
+
+The approximation
+
+$$
+f(x,y) \approx L(x,y)
+$$
+
+is the **standard linear approximation** of $f$ at $(x_{0}, y_{0})$.
+
+### Error in Standard Linear Approximation
+
+If $f$ has continuous first and second partial derivatives throughout an open set containing a rectangle $R$ centered at $(x_{0}, y_{0})$, and if $M$ is any upper bound for the values of $|f_{xx}|, |f_{yy}|, |f_{xy}|$ on $R$, then the error $E(x,y)$ incurred in replacing $f(x,y)$ on $R$ by its linearization
+
+$$
+L(x,y) = f(x_{0}, y_{0}) + f_{x}(x_{0}, y_{0})(x - x_{0}) + f_{y}(x_{0}, y_{0})(y - y_{0})
+$$
+
+satisfies the inequality
+
+$$
+|E(x,y)| \le \frac{1}{2} M (|x - x_{0}| + |y - y_{0}|)^{2}.
+$$
+
+### Definition 14 - Total Differential
+
+If we move from $(x_{0}, y_{0})$ to a point $(x_{0} + dx, y_{0} + dy)$ nearby, the resulting change
+
+$$
+df = f_{x}(x_{0}, y_{0}) \ dx + f_{y}(x_{0}, y_{0}) \ dy
+$$
+
+in the linearization of $f$ is called the **total differential** of $f$.
+
 
