@@ -17,3 +17,4 @@ Kenneth Rosen - Discrete Mathematics and Its Applications - 8th edition
 - [5 Induction and Recursion](5%20Induction%20and%20Recursion.md)
 - [6 Counting](6%20Counting.md)
 - [8 Advanced Counting Techniques](8%20Advanced%20Counting%20Techniques.md)
+- [9 Relations](9%20Relations.md)
