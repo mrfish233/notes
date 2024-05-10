@@ -499,4 +499,220 @@ $$
 
 in the linearization of $f$ is called the **total differential** of $f$.
 
+## 13.7 Extreme Values and Saddle Points
 
+### Definition 15 - Local Maximum / Minimum
+
+Let $f(x,y)$ be defined on a region $R$ containing the point $(a,b)$, then
+
+1. $f(a,b)$ is a **local maximum** value of $f$ if $f(a,b) \ge f(x,y)$ for all domain points $(x,y)$ in an open disk centered at $(a,b)$.
+2. $f(a,b)$ is a **local minimum** value of $f$ if $f(a,b) \le f(x,y)$ for all domain points $(x,y)$ in an open disk centered at $(a,b)$.
+
+If such points exist, the tangent planes are horizontal. Local maxima are also called **relative extrema**.
+
+### Theorem 10 - First Derivative Theorem for Local Extreme Values
+
+If $f(x,y)$ has a *local maximum or minimum value* at an interior point $(a,b)$ of its domain and if the first partial derivatives exist there, then
+
+$$
+f_{x}(a,b) = 0 \quad \text{and} \quad f_{y}(a,b) = 0.
+$$
+
+**Proof:**
+
+If $f$ has local extremum at $(a,b)$, then the function $g(x) = f(x,b)$ has a local extremum at $x = a$. Therefore, $g'(a) = f_{x}(a,b) = 0$. Similarly, $f_{y}(a,b) = 0$.
+
+Substitute $f_{x}(a,b) = 0$ and $f_{y}(a,b) = 0$ into the equation of tangent plane to the surface at $(a,b)$:
+
+$$
+\begin{align}
+f_{x}(a,b)(x-a) + f_{y}(a,b)(y-b) - (z - f(a,b)) &= 0 \\
+0 \cdot (x-a) + 0 \cdot (y-b) - (z - f(a,b)) &= 0
+\end{align}
+$$
+
+The equation reduces to
+
+$$
+z = f(a,b).
+$$
+
+Thus, the surface has a horizontal tangent plane at a local extremum, provided there's a tangent plane there.
+
+### Definition 16 - Critical Point
+
+An interior point of the domain of a function $f(x,y)$ where both $f_{x}, f_{y}$ are zero or where one or both of $f_{x}$ and $f_{y}$ do not exist is a **critical point** of $f$.
+
+### Definition 17 - Saddle Point
+
+A differentiable function $f(x,y)$ has a **saddle point** at a critical point $(a,b)$ if in every open disk centered at $(a,b)$ there are domain points $(x,y)$ where $f(x,y) > f(a,b)$ and $f(x,y) < f(a,b)$.
+
+### Theorem 11 - Second Derivative Test for Local Extreme Values
+
+Suppose that $f(x,y)$ and its first and second partial derivatives are continuous throughout a disk centered at $(a,b)$ and that $f_{x}(a,b) = f_{y}(a,b) = 0$, then
+
+1. $f$ has a **local maximum** at $(a,b)$ if $f_{xx} < 0$ and $f_{xx}f_{yy} - f_{xy}^{2} > 0$ at $(a,b)$.
+2. $f$ has a **local minimum** at $(a,b)$ if $f_{xx} > 0$ and $f_{xx}f_{yy} - f_{xy}^{2} > 0$ at $(a,b)$.
+3. $f$ has a **saddle point** at $(a,b)$ if $f_{xx}f_{yy} - f_{xy}^{2} < 0$ at $(a,b)$.
+4. The test is **inconclusive** at $(a,b)$ if $f_{xx}f_{yy} - f_{xy}^{2} = 0$ at $(a,b)$.
+
+The expression $f_{xx}f_{yy} - f_{xy}^{2} > 0$ is called the *discriminant* or *Hessian* of $f$.
+
+$$
+f_{xx}f_{yy} - f_{xy}^{2} = 
+\begin{vmatrix}
+f_{xx} & f_{xy} \\
+f_{yx} & f_{yy}
+\end{vmatrix}.
+$$
+
+### Absolute Maxima and Minima on Closed Bounded Regions
+
+To find absolute extrema of a function $f(x,y)$ on a closed and bounded region $R$,
+
+1. List the **interior points** of $R$ where $f$ may have local maxima and minima and evaluate $f$ at these points. These are *critical points* if $f$.
+2. List the **boundary points** of $R$ where $f$ has local maxima and minima and evaluate $f$ at these points.
+3. Look through the lists for the maximum and minimum values of $f$. These will be the *absolute maximum and minimum* values of $f$ on $R$.
+
+## 13.8 Lagrange Multipliers
+
+### Theorem 12 - The Orthogonal Gradient Theorem
+
+Suppose that $f(x,y,z)$ is differentiable in a region whose interior contains a smooth curve
+
+$$
+C: r(t) = x(t) \mathbf{i} + y(t) \mathbf{j} + z(t) \mathbf{k}.
+$$
+
+If $P_{0}$ is a point on $C$ where $f$ has a local maximum or minimum relative to its values on $C$, then $\nabla f$ is orthogonal to the curve's tangent vector $\mathbf{r}'$ at $P_{0}$.
+
+#### Corollary of Theorem 12
+
+At the points on a smooth curve $\mathbf{r}(t) = x(t) \mathbf{i} + y(t) \mathbf{j}$ where a differentiable function $f(x,y)$ takes on its local maxima and minima relative to its values on the curve, we have $\nabla{f} \cdot \mathbf{r}' = 0$.
+
+### Method of Lagrange Multipliers
+
+Suppose that $f(x,y,z)$ and $g(x,y,z)$ are differentiable and $\nabla{g} \ne 0$ when $g(x,y,z) = 0$. To find the local maximum and minimum values of $f$ subject to the constraint $g(x,y,z) = 0$, find the values of $x, y, z, \lambda$ that satisfy the equation
+
+$$
+\nabla{f} = \lambda \nabla{g}
+\quad \text{and} \quad
+g(x,y,z) = 0.
+$$
+
+**Example:** find the largest and smallest values that the function
+
+$$
+f(x,y) = xy
+$$
+
+takes on the ellipse
+
+$$
+\frac{x^{2}}{8} + \frac{y^{2}}{2} = 1.
+$$
+
+**Solution:**
+
+Let
+
+$$
+g(x,y) = \frac{x^{2}}{8} + \frac{y^{2}}{2} - 1 = 0,
+$$
+
+then find the values of $x, y, \lambda$ for which
+
+$$
+\nabla{f} = \lambda \nabla{g}
+\quad \text{and} \quad
+g(x,y) = 0.
+$$
+
+Then
+
+$$
+\begin{align}
+\nabla{f} &= \lambda \nabla{g} \\
+y \mathbf{i} + x \mathbf{j} &= \frac{\lambda}{4} x \mathbf{i} + \lambda y \mathbf{j},
+\end{align}
+$$
+
+we find that $y = \frac{\lambda}{4}x, x = \lambda y$, or $y = \frac{\lambda^{2}}{4}y$, so that $y = 0$ or $\lambda = \pm 2$. Consider two cases:
+
+*Case 1:* If $y = 0$, then $x = y = 0$, but $(0,0)$ is not on the ellipse. Hence $y \ne 0$.
+
+*Case 2:* If $y \ne 0$, then $\lambda = \pm 2$ and $x = \pm 2y$. Substituting this into $g(x,y) = 0$ gives
+
+$$
+\begin{align}
+\frac{(\pm 2y)^{2}}{8} + \frac{y^{2}}{2} &= 1 \\
+4y^{2} + 4y^{2} &= 8 \\
+y &= \pm 1.
+\end{align}
+$$
+
+The function $f(x,y) = xy$ therefore takes on its extreme values on the ellipse at the four points $(\pm 2, \pm 1)$. The extreme values are $xy = 2$ and $xy = -2$.
+
+### Lagrange Multipliers with Two Constraints
+
+To find the extreme values of a differentiable function $f(x,y,z)$ with two constraints
+
+$$
+g_{1}(x,y,z) = 0, \quad g_{2}(x,y,z) = 0
+$$
+
+and $g_{1}, g_{2}$ are differentiable and not parallel to each other, we need to find the values of $x, y, z, \lambda, \mu$ that satisfy the equation
+
+$$
+\nabla{f} = \lambda \nabla{g_{1}} + \mu \nabla{g_{2}},
+\quad g_{1}(x,y,z) = 0,
+\quad g_{2}(x,y,z) = 0.
+$$
+
+**Example:** The plane $x + y + z = 1$ cuts the cylinder $x^{2} + y^{2} = 1$ in an ellipse, find the points on the ellipse that lie closest to and farthest from the origin.
+
+**Solution:**
+
+We need to find the values of
+
+$$
+f(x,y,z) = x^{2} + y^{2} + z^{2}
+$$
+
+subject to the constraints
+
+$$
+\begin{align}
+g_{1}(x,y,z) &= x^{2} + y^{2} - 1 = 0 \\
+g_{2}(x,y,z) &= x + y + z - 1 = 0.
+\end{align}
+$$
+
+The gradient equation gives
+
+$$
+\begin{align}
+\nabla{f} &= \lambda \nabla{g_{1}} + \mu \nabla{g_{2}} \\
+2x \mathbf{i} + 2y \mathbf{j} + 2z \mathbf{k} &= 
+\lambda (2x \mathbf{i} + by \mathbf{j}) + \mu (\mathbf{i} + \mathbf{j} + \mathbf{k}) \\
+&= (2 \lambda x + \mu) \mathbf{i} + (2 \lambda y + \mu) \mathbf{j} + \mu \mathbf{k},
+\end{align}
+$$
+
+or
+
+$$
+2x = 2 \lambda x + \mu, \quad 2y = 2 \lambda y + \mu, \quad 2z = \mu.
+$$
+
+Therefore we need to solve
+
+$$
+\begin{cases}
+g_{1}(x,y,z) = x^{2} + y^{2} - 1 = 0 \\
+g_{2}(x,y,z) = x + y + z - 1 = 0 \\
+2x = 2 \lambda x + \mu \\
+2y = 2 \lambda y + \mu \\
+2z = \mu
+\end{cases}
+$$
