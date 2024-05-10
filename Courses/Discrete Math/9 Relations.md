@@ -35,7 +35,9 @@ The relation $R$ on a set $A$ is **transitive** if and only if $R^{n} \subseteq 
 
 ## 9.5 Equivalence Relations
 
-### Definition - Equivalence Relation
+### 9.5.2 Equivalence Relations
+
+#### Definition - Equivalence Relation
 
 A relation on a set $A$ is called an equivalence relation if it is **reflexive, symmetric, and transitive**.
 
@@ -67,8 +69,52 @@ $$
 
 By definition we have $a \equiv c \pmod{m}$, therefore congruence modulo $m$ is **transitive**. Therefore congruence modulo $m$ is an equivalence relation.
 
-### Definition - Equivalent
+#### Definition - Equivalent
 
 Two elements $a$ and $b$ that are related by an equivalence relation are called **equivalent**. The notation $a \sim b$  is used to denote $a$ and $b$ are equivalent elements with respect to a particular equivalence relation.
+
+### 9.5.3 Equivalence Classes
+
+#### Definition: Equivalence Classes
+
+Let $R$ be an equivalence relation on a set $A$. The set of all elements that are related to an element $a$ of $A$ is called the **equivalence class** of $a$, denoted by $[a]_{R}$. The notation $[a]$ is also used if only one relation.
+
+In other words, if $R$ is an equivalence relation on a set $A$, the equivalence class of the element $a$ is
+
+$$
+[a]_{R} = \set{s \mid (a,s) \in R}.
+$$
+
+A **representative** of this equivalence class is an element $b$ such that $b \in [a]_{R}$.
+
+### 9.5.3 Equivalence Classes and Partitions
+
+#### Theorem 1
+
+Let $R$ be an *equivalence relation* on a set $A$. These statements for elements $a, b$ of $A$ are equivalent:
+
+$$
+\begin{align}
+\text{(i)} &\quad aRb \\
+\text{(ii)} &\quad [a] = [b] \\
+\text{(iii)} &\quad [a] \cap [b] \ne \emptyset \\
+\end{align}
+$$
+
+**Proof:**
+
+$\text{(i)} \implies \text{(ii)}$: Proof the result by showing that $[a] \subseteq [b]$ and $[b] \subseteq [a]$.
+
+Proof of $[a] \subseteq [b]$: let $c \in [a]$. By definition, $aRc$. Since $aRb$ and $R$ is symmetric, then $bRa$. Furthermore, since $R$ is transitive and $bRa, aRc$, it follows that $bRc$. Hence $c \in [b]$. This shows that $[a] \subseteq [b]$.
+
+Proof of $[b] \subseteq [a]$: let $d \in [b]$. By definition, $bRd$. Since $R$ is transitive and $aRb, bRd$, it follows that $aRd$. Hence $d \in [a]$. This shows that $[b] \subseteq [a]$.
+
+$\text{(ii)} \implies \text{(iii)}$:
+
+Let $[a] = [b]$. Since $R$ is reflexive, then $a \in [a]$ and therefore $[a]$ is nonempty. It follows that $[a] \cap [b] \ne \emptyset$.
+
+$\text{(iii)} \implies \text{(i)}$:
+
+Let $[a] \cap [b] \ne \emptyset$. Then there exists an element $c$ such that $c \in [a]$ and $c \in [b]$. By definition, we have $aRc$ and $bRc$. Since $R$ is symmetric, we have $cRb$. Furthermore, since $R$ is transitive and $aRc, cRb$, it follows that $aRb$.
 
 
