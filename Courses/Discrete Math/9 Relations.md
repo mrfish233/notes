@@ -2,26 +2,32 @@
 
 ## 9.1 Relations and Their Properties
 
-### Definition - Binary Relation
+### 9.1.1 Introduction
+
+#### Definition: Binary Relation
 
 Let $A$ and $B$ be sets. A **binary relation** from $A$ to $B$ is a subset of $A \times B$. The notation $aRb$ is used to denote $(a,b) \in R$ and $a \not R b$ is $(a,b) \not \in R$.
 
-### Definition - Relation on a Set
+### 9.1.3 Relations on a Set
+
+#### Definition: Relations on a Set
 
 A **relation on a set** $A$ is a relation from $A$ to $A$, or a subset of $A \times A$.
 
-### Properties of Relations
+### 9.1.4 Properties of Relations
 
 - **Reflexive**: for $a \in A, (a,a) \in R$.
 - **Symmetric**: for $a, b \in A, (a,b) \in R \implies (b,a) \in R$.
 - **Antisymmetric**: for $a, b \in A, (a,b) \in R \implies (b,a) \notin R$.
 - **Transitive**: for $a,b,c \in A, (a,b) \in R \land (b,c) \in R \implies (a,c) \in R$.
 
-### Definition - Composite
+### 9.1.5 Combining Relations
+
+#### Definition: Composite
 
 Let $R$ be a relation from a set $A$ to a set $B$ and $S$ a relation from $B$ to a set $C$. The **composite** of $R$ and $S$, denoted by $S \circ R$, is the relation consisting of ordered pairs $(a,c)$, where $a \in A, c \in C$, and for which there exists an element $b \in B$ such that $(a,b) \in R$ and $(b,c) \in S$.
 
-### Definition - Self-Relation
+#### Definition: Self-Relation
 
 Let $R$ be a relation on the set $A$. The powers $R^{n}, n = 1, 2, 3, \cdots$, are defined as
 
@@ -29,7 +35,7 @@ $$
 R^{1} = R \quad \text{and} \quad R^{n+1} = R^{n} \circ R.
 $$
 
-### Theorem 1 - Transitive Relation
+#### Theorem 1
 
 The relation $R$ on a set $A$ is **transitive** if and only if $R^{n} \subseteq R$ for $n = 1, 2, 3, \cdots$.
 
@@ -87,7 +93,7 @@ $$
 
 A **representative** of this equivalence class is an element $b$ such that $b \in [a]_{R}$.
 
-### 9.5.3 Equivalence Classes and Partitions
+### 9.5.4 Equivalence Classes and Partitions
 
 #### Theorem 1
 
@@ -117,4 +123,67 @@ $\text{(iii)} \implies \text{(i)}$:
 
 Let $[a] \cap [b] \ne \emptyset$. Then there exists an element $c$ such that $c \in [a]$ and $c \in [b]$. By definition, we have $aRc$ and $bRc$. Since $R$ is symmetric, we have $cRb$. Furthermore, since $R$ is transitive and $aRc, cRb$, it follows that $aRb$.
 
+#### Theorem 2
 
+Let $R$ be an *equivalence relation* on a set $S$. Then the equivalence classes of $R$ form a **partition** of $S$.
+Conversely, given a *partition* $\set{A_{i} \mid i \in I}$ of the set $S$, there is an **equivalence relation** $R$ that has the sets $A_{i}, i \in I$, as its equivalence classes.
+
+## 9.6 Partial Orderings
+
+### 9.6.1 Introduction
+
+#### Definition: Partial Orderings
+
+A relation $R$ on a set $S$ is called a partial ordering or partial order if it is **reflexive, antisymmetric, and transitive**.
+A set $S$ with partial ordering $R$ is called a partially ordered set, or **poset**, and it is denoted by $(S, R)$.
+
+#### Definition: Comparable
+
+The elements $a, b$ of a poset $(S, \preccurlyeq)$ are called **comparable** if either $a \preccurlyeq b$ or $b \preccurlyeq a$, otherwise called **incomparable**.
+
+#### Definition: Total Order
+
+If $(S, \preccurlyeq)$ is a poset and every two elements of $S$ are *comparable*, $S$ is called a **totally ordered set** (or **linearly ordered set**), and $\preccurlyeq$ is called a **total order** or **linear order**. A totally ordered set is also called a **chain**.
+
+#### Definition: Well-Ordered Set
+
+$(S, \preccurlyeq)$ is a **well-ordered set** if it is a poset such that $\preccurlyeq$ is a *total ordering* and every nonempty subset of $S$ has a least element.
+
+#### Theorem 1: The Principle of Well-Ordered Induction
+
+Suppose that $S$ is a well-ordered set, then $P(x)$ is true for all $x \in S$, if
+
+INDUCTIVE STEP: For every $y \in S$, if $P(x)$ is true for all $x \in S$ with $x \prec y$, then $P(y)$ is true.
+
+### 9.6.3 Hasse Diagrams
+
+Many edges in the digraph for a finite poset do not have to be shown as they must be present. The procedure for simplifying the digraph of a poset is as follows:
+
+1. Draw the digraph for the poset $(S, R)$.
+2. Remove all the loops.
+3. Remove edges $(x,y)$ for which there is an element $z \in S$ such that $xRz$ and $zRy$.
+4. Arrange each edge so that its initial vertex is below its terminal vertex.
+5. Remove all the arrows on the edges.
+
+**Example:** $A = \set{a, b, c}$ and $R$: the "subset" relation on $2^A$, the power set of $A$. The Hasse's diagram of $(A, R)$ is
+
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TD
+0([a, b, c])
+1([a, b])
+2([b, c])
+3([a, c])
+4([a])
+5([b])
+6([c])
+7([∅])
+
+0 --- 1 & 2 & 3
+3 --- 4 & 6
+1 --- 4 & 5
+2 --- 5 & 6
+4 --- 7
+6 --- 7
+5 --- 7
+```
