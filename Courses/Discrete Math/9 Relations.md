@@ -39,6 +39,48 @@ $$
 
 The relation $R$ on a set $A$ is **transitive** if and only if $R^{n} \subseteq R$ for $n = 1, 2, 3, \cdots$.
 
+## 9.3 Representing Relations
+
+### 9.3.3 Representing Relations Using Digraphs
+
+#### Definition - Digraph
+
+A directed graph (or digraph) consists of a set $V$ of *vertices* (or nodes) together with a set $E$ of ordered pairs of elements of $V$ called *edges* (or arcs). The vertex $a$ is called the *initial vertex* of the edge $(a,b)$, and the vertex $b$ is called the terminal vertex of this edge.
+
+**Example:** The directed graph of the relation
+
+$$
+R = \set{(1,3), (1,4), (2,3), (2,4)}
+$$
+
+on the set $\set{1,2,3,4}$ is
+
+```tikz
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{tikzcd}
+
+A \arrow[rr] && B
+
+\end{tikzcd}
+
+\quad \quad
+
+\begin{tikzcd}[row sep=2.5em]
+
+A' \arrow[rr,"f'"] \arrow[dr,swap,"a"] \arrow[dd,swap,"g'"] &&
+  B' \arrow[dd,swap,"h'" near start] \arrow[dr,"b"] \\
+& A \arrow[rr,crossing over,"f" near start] &&
+  B \arrow[dd,"h"] \\
+C' \arrow[rr,"k'" near end] \arrow[dr,swap,"c"] && D' \arrow[dr,swap,"d"] \\
+& C \arrow[rr,"k"] \arrow[uu,<-,crossing over,"g" near end]&& D
+
+\end{tikzcd}
+
+\end{document}
+```
+
 ## 9.5 Equivalence Relations
 
 ### 9.5.2 Equivalence Relations
@@ -141,9 +183,11 @@ A set $S$ with partial ordering $R$ is called a partially ordered set, or **pose
 
 The elements $a, b$ of a poset $(S, \preccurlyeq)$ are called **comparable** if either $a \preccurlyeq b$ or $b \preccurlyeq a$, otherwise called **incomparable**.
 
-#### Definition: Total Order
+#### Definition: Total Order / Chain
 
-If $(S, \preccurlyeq)$ is a poset and every two elements of $S$ are *comparable*, $S$ is called a **totally ordered set** (or **linearly ordered set**), and $\preccurlyeq$ is called a **total order** or **linear order**. A totally ordered set is also called a **chain**.
+If $(S, \preccurlyeq)$ is a poset and every two elements of $S$ are *comparable*, $S$ is called a **totally ordered set** (or **linearly ordered set**), and $\preccurlyeq$ is called a **total order** or **linear order**.
+
+A totally ordered set is also called a **chain**. An **antichain** is a subset of $A$ in which no two elements are comparable.
 
 #### Definition: Well-Ordered Set
 
@@ -188,4 +232,6 @@ flowchart TD
 5 --- 7
 ```
 
+#### Theorem 1: Dilworth's Theorem
 
+Let $(S, \preccurlyeq)$ be a finite poset, then the size of a *maximum antichain* is equal to the minimum number of *chains* that form a partition of $S$.
