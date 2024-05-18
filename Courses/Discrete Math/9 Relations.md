@@ -57,27 +57,11 @@ on the set $\set{1,2,3,4}$ is
 
 ```tikz
 \usepackage{tikz-cd}
-
 \begin{document}
 \begin{tikzcd}
-
-A \arrow[rr] && B
-
+A \arrow[rd] \arrow[r, "\phi"] & B \\
+& C
 \end{tikzcd}
-
-\quad \quad
-
-\begin{tikzcd}[row sep=2.5em]
-
-A' \arrow[rr,"f'"] \arrow[dr,swap,"a"] \arrow[dd,swap,"g'"] &&
-  B' \arrow[dd,swap,"h'" near start] \arrow[dr,"b"] \\
-& A \arrow[rr,crossing over,"f" near start] &&
-  B \arrow[dd,"h"] \\
-C' \arrow[rr,"k'" near end] \arrow[dr,swap,"c"] && D' \arrow[dr,swap,"d"] \\
-& C \arrow[rr,"k"] \arrow[uu,<-,crossing over,"g" near end]&& D
-
-\end{tikzcd}
-
 \end{document}
 ```
 
