@@ -18,3 +18,4 @@ Kenneth Rosen - Discrete Mathematics and Its Applications - 8th edition
 - [6 Counting](6%20Counting.md)
 - [8 Advanced Counting Techniques](8%20Advanced%20Counting%20Techniques.md)
 - [9 Relations](9%20Relations.md)
+- [10 Graphs](10%20Graphs.md)
