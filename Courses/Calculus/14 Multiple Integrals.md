@@ -127,20 +127,102 @@ $$
 
 ### Definition: Spherical Coordinates
 
+![Spherical Coordinates](spherical_coordinates.png)
+
 **Spherical coordinates** represent a point $P$ in space by ordered triples $(\rho, \phi, \theta)$ in which
 
-1. $\rho$ is the distance from $P$ to the origin $(\rho \ge 0)$.
-2. $\phi$ is the angle $\overset\rightharpoonup{OP}$ makes with the positive $z$-axis $(0 \le \phi \le \pi)$.
-3. $\theta$ is the angle from cylindrical coordinates.
+1. $\rho$ is the *distance* from $P$ to the origin $(\rho \ge 0)$.
+2. $\phi$ is the *angle* $\overset\rightharpoonup{OP}$ makes with the positive $z$-axis $(0 \le \phi \le \pi)$.
+3. $\theta$ is the *angle* from cylindrical coordinates.
 
 Equations Relating **Spherical Coordinates** to *Cartesian* and *Cylindrical Coordinates*:
 
 $$
 \begin{align}
-&\text{1. } r = \rho \sin \theta \\
-&\text{2. } z = \rho \cos \theta \\
-&\text{3. } x = r \cos \theta = \rho \sin \theta \cos \theta \\
-&\text{4. } r^{2} = x^{2} + y^{2} \\
-&\text{5. } \tan \theta = \frac{y}{x} \\
+&\text{1. } r = \rho \sin \phi \\
+&\text{2. } z = \rho \cos \phi \\
+&\text{3. } x = r \cos \theta = \rho \sin \phi \cos \theta \\
+&\text{4. } y = r \sin \theta = \rho \sin \phi \sin \theta \\
+&\text{5. } \rho = \sqrt{x^{2} + y^{2} + z^{2}} = \sqrt{r^{2} + z^{2}}. \\
 \end{align}
 $$
+
+The triple integral is
+
+$$
+\iiint_{D} f(\rho, \phi, \theta) \ dV =
+\iiint_{D} f(\rho, \phi, \theta) \rho^{2} \sin{\phi} \ d\rho \ d\phi \ d\theta
+$$
+
+### Summary
+
+**Coordinate Conversion Formulas**
+
+1. Cylindrical to Rectangular
+
+$$
+\begin{align}
+x &= r \cos \theta \\
+y &= r \sin \theta \\
+z &= z
+\end{align}
+$$
+
+2. Spherical to Rectangular
+
+$$
+\begin{align}
+x &= \rho \sin \phi \cos \theta \\
+y &= \rho \sin \phi \sin \theta \\
+z &= \rho \cos \phi
+\end{align}
+$$
+
+3. Spherical to Cylindrical
+
+$$
+\begin{align}
+r &= \rho \sin \theta \\
+z &= \rho \cos \theta \\
+\theta &= \theta
+\end{align}
+$$
+
+**Corresponding formula for $dV$ in triple integrals:**
+
+$$
+\begin{align}
+dV &= dx \ dy \ dz \\
+&= r \ dz \ dr \ d\theta \\
+&= \rho^{2} \sin \phi \ d\rho \ d\phi \ d\theta
+\end{align}
+$$
+
+## 14.8 Substitutions in Multiple Integrals
+
+### Definition: Jacobian determinant
+
+The **Jacobian determinant** or Jacobian of the coordinate transformation $x = g(u,v), y = h(u,v)$ is
+
+$$
+J(u,v) =
+\frac{\delta(x,y)}{\delta(u,v)} =
+\begin{vmatrix}
+\displaystyle\frac{\delta x}{\delta u} & \displaystyle\frac{\delta x}{\delta v} \\
+\displaystyle\frac{\delta y}{\delta u} & \displaystyle\frac{\delta y}{\delta v}
+\end{vmatrix} =
+\frac{\delta x}{\delta u} \frac{\delta y}{\delta v} - \frac{\delta y}{\delta u} \frac{\delta x}{\delta v}.
+$$
+
+### Theorem 3: Substitution for Double Integrals
+
+Suppose that $f(x,y)$ is continuous over the region $R$. Let $G$ be the preimage of $R$ under the transformation $x = g(u,v), y = h(u,v)$, which is assumed to be one-to-one on the interior of $G$.
+
+If $g, h$ have continuous first partial derivatives within the interior of $G$, then
+
+$$
+\iint_{R} f(x,y) \ dx \ dy =
+\iint_{G} f(g(u,v), h(u,v)) \left|\frac{\delta(x,y)}{\delta(u,v)}\right| \ du \ dv.
+$$
+
+
