@@ -225,4 +225,35 @@ $$
 \iint_{G} f(g(u,v), h(u,v)) \left|\frac{\delta(x,y)}{\delta(u,v)}\right| \ du \ dv.
 $$
 
+### Substitutions in Triple Integrals
 
+Suppose that a region $G$ in $uvw$-space is transformed one-to-one into the region $D$ in $xyz$-space by differentiable equations of the form
+
+$$
+x = g(u,v,w), \quad y = h(u,v,w), \quad z = k(u,v,w),
+$$
+
+then any function $F(x,y,z)$ defined on $D$ can be thought of as a function
+
+$$
+F(g(u,v,w), h(u,v,w), k(u,v,w)) = H(u,v,w)
+$$
+
+defined on $G$. If $g, h, k$ have continuous first partial derivatives, then the integral of $F(x,y,z)$ over $D$ is related to the integral of $H(u,v,w)$ over $G$ by the equation
+
+$$
+\iiint_{D} F(x,y,z) \ dx \ dy \ dz =
+\iiint_{G} H(u,v,w) \ |J(u,v,w)| \ du \ dv \ dw.
+$$
+
+The factor $J(u,v,w)$, is the **Jacobian determinant**
+
+$$
+J(u,v,w) = 
+\begin{vmatrix}
+\displaystyle\frac{\delta x}{\delta u} & \displaystyle\frac{\delta x}{\delta v} & \displaystyle\frac{\delta x}{\delta w} \\
+\displaystyle\frac{\delta y}{\delta u} & \displaystyle\frac{\delta y}{\delta v} & \displaystyle\frac{\delta y}{\delta w} \\
+\displaystyle\frac{\delta y}{\delta u} & \displaystyle\frac{\delta y}{\delta v} & \displaystyle\frac{\delta z}{\delta w}
+\end{vmatrix} =
+\frac{\delta (x,y,z)}{\delta (u,v,w)}.
+$$
