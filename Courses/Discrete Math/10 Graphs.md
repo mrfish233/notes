@@ -138,3 +138,14 @@ The bipartite graph $G = (V,E)$ with bipartition $(V_{1}, V_{2})$ has a complete
 
 A **subgraph** of a graph $G = (V,E)$ is a graph $H = (W,F)$ where $W \subseteq V$ and $F \subseteq E$. A subgraph $H$ of $G$ is a **proper subgraph** of $G$ if $H \ne G$.
 
+#### Definition: Subgraph Induced
+
+Let $G = (V,E)$ be a simple graph. The **subgraph induced** by a subset $W$ of the vertex set $V$ is the graph $(W,F)$, where the edge set $F$ contains an edge in $E$ if and only if both endpoints of this edge are in $W$.
+
+#### Definition: Union
+
+The **union** of two simple graphs $G_{1} = (V_{1}, E_{1})$ and $G_{2} = (V_{2}, E_{2})$ is the simple graph with vertex set $V_{1} \cup V_{2}$ and edge set $E_{1} \cup E_{2}$, denoted by $G_{1} \cup G_{2}$.
+
+## 10.3 Representing Graphs and Graph Isomorphism
+
+
