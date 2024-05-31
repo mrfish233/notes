@@ -132,6 +132,10 @@ A matching $M$ in a bipartite graph $G = (V,E)$ with bipartition $(V_{1}, V_{2})
 
 The bipartite graph $G = (V,E)$ with bipartition $(V_{1}, V_{2})$ has a complete matching from $V_{1}$ to $V_{2}$ if and only if $|N(A)| \ge |A|$ for all subsets $A$ of $V_{1}$.
 
+**Proof:**
+
+*(Forward proof):* Suppose that there is a complete matching $M$ from $V_{1}$ to $V_{2}$. If $A \subseteq V_{1}$, for every vertex $v \in A$, there is an edge connecting $v$ to a vertex in $V_{2}$.
+
 ### 10.2.7 New Graphs from Old
 
 #### Definition: Subgraph
@@ -148,4 +152,51 @@ The **union** of two simple graphs $G_{1} = (V_{1}, E_{1})$ and $G_{2} = (V_{2},
 
 ## 10.3 Representing Graphs and Graph Isomorphism
 
+![[simple-graph.png]]
 
+### 10.3.2 Representing Graphs
+
+A way to represent a graph with no multiple edges is to use **adjacency lists**. For the simple graph above,
+
+| Vertex | Adjacent Vertices |
+| ------ | ----------------- |
+| a      | b, c, e           |
+| b      | a                 |
+| c      | a, d, e           |
+| d      | c, e              |
+| e      | a, c, d           |
+
+### 10.3.3 Adjacency Matrices
+
+The matrix representing the graph above is
+
+$$
+\begin{bmatrix}
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0
+\end{bmatrix}
+$$
+
+### 10.3.4 Incidence Matrices
+
+Let $G = (V,E)$ be an undirected graph. Suppose that $v_{1}, v_{2}, \cdots, v_{n}$ are the vertices and $e_{1}, e_{2}, \cdots, e_{m}$ are the edges of $G$. Then the incidence matrix with respect to this ordering of $V$ and $E$ is the $n \times m$ matrix $\mathbf{M} = [m_{ij}]$, where
+
+$$
+m_{ij} = 
+\begin{cases}
+1 \quad \text{when edge } e_{j} \text{ is incident with } v_{i}, \\
+0 \quad \text{otherwise}.
+\end{cases}
+$$
+
+Below is an example of incidence matrix.
+
+![[Pasted image 20240531104428.png]]
+
+### 10.3.5 Isomorphism of Graphs
+
+#### Definition: Isomorphic
+
+The simple graphs $G_{1} = (V_{1}, E_{1})$ and $G_{2} = (V_{2}, E_{2})$ are **isomorphic** if there exists a one-to-one and onto function $f$ from $V_{1}$ to $V_{2}$ with the property that $a$ and $b$ are adjacent in $G_{1}$ if and only if $f(a)$ and $f(b)$ are adjacent in $G_{2}$, for all $a$ and $b$ in $V_{1}$.
