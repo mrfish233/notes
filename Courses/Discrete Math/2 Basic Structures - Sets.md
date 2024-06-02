@@ -182,4 +182,41 @@ $$
 \end{align}
 $$
 
+#### Definition: Image of Function
+
+Let $f$ be a function from $A$ to $B$ and let $S$ be a subset of $A$. The **image** of $S$ under the function $f$ is the subset of $B$ that consists of the images of the elements of $S$.
+
+$$
+f(S) = \set{t \mid \exists s \in S \ (t = f(s))}.
+$$
+
+The shorthand set is $\set{f(s) \mid s \in S}$.
+
+### 2.3.2 One-to-One and Onto Functions
+
+#### Definition: One-to-One
+
+A function $f$ is said to be **one-to-one**, or an **injection**, if and only if $f(a) = f(b)$ implies that $a = b$ for all $a$ and $b$ in the domain of $f$. Such function is called **injective**.
+
+We can express that $f$ is one-to-one as $\forall a \forall b (f(a) = f(b) \implies a = b)$.
+
+#### Definition: Onto
+
+A function $f$ from $A$ to $B$ is called **onto**, or a **surjection**, if and only if for every element $b \in B$ there is an element $a \in A$ with $f(a) = b$. Such function is called **surjective**.
+
+It is also expressed as $\forall y \exists x (f(x) = y)$.
+
+#### Definition: Correspondence
+
+The function $f$ is a **one-to-one correspondence**, or a **bijection**, it it is both one-to-one and onto. Such function is called **bijective**.
+
+#### Summary of Functions
+
+Suppose that $f: A \to B$,
+
+1. To show that $f$ is *injective*, show that if $f(x) = f(y)$ for any $x, y \in A$, then $x = y$.
+2. To show that $f$ is *not injective*, find $x, y \in A$ such that $x \ne y$ and $f(x) = f(y)$.
+3. To show that $f$ is *surjective*, consider an arbitrary element $y \in B$ and find an element $x \in A$ such that $f(x) = y$.
+4. To show that $f$ is *not surjective*, find a particular $y \in B$ such that $f(x) \ne y$ for all $x \in A$.
+
 
