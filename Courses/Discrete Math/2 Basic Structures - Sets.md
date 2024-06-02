@@ -152,3 +152,34 @@ A_{1} \cap A_{2} \cap \cdots \cap A_{n} = \bigcap_{i=1}^{n} A_{i}
 $$
 
 to denote the intersection of the sets $A_{1}, A_{2}, \cdots, A_{n}$.
+
+## 2.3 Functions
+
+### 2.3.1 Introduction
+
+#### Definition: Function
+
+Let $A$ and $B$ be nonempty sets. A **function** $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$.
+
+If $f$ is a function from $A$ to $B$, we write $f: A \to B$.
+
+Functions are sometimes called **mappings** or **transformations**.
+
+#### Definition: Domain, Codomain, Image, Preimage, Range
+
+If $f$ is a function from $A$ to $B$, $A$ is the **domain** of $f$ and $B$ is the **codomain** of $f$. If $f(a) = b$, then $b$ is the **image** of $a$ and $a$ is the **preimage** of $b$.
+
+The **range** or **image** of $f$ is the set of all images of elements of $A$.
+
+#### Definition: Addition and Multiplication of Function
+
+Let $f_{1}$ and $f_{2}$ be functions from $A$ to $\mathbf{R}$. Then $f_{1} + f_{2}$ and $f_{1}f_{2}$ are also functions from $A$ to $\mathbf{R}$ defined for all $x \in A$ by
+
+$$
+\begin{align}
+(f_{1} + f_{2})(x) &= f_{1}(x) + f_{2}(x), \\
+(f_{1}f_{2})(x) &= f_{1}(x) f_{2}(x).
+\end{align}
+$$
+
+
