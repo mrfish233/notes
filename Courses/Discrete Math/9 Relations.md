@@ -43,7 +43,7 @@ The relation $R$ on a set $A$ is **transitive** if and only if $R^{n} \subseteq 
 
 ### 9.3.3 Representing Relations Using Digraphs
 
-#### Definition - Digraph
+#### Definition: Digraph
 
 A directed graph (or digraph) consists of a set $V$ of *vertices* (or nodes) together with a set $E$ of ordered pairs of elements of $V$ called *edges* (or arcs). The vertex $a$ is called the *initial vertex* of the edge $(a,b)$, and the vertex $b$ is called the terminal vertex of this edge.
 
@@ -69,7 +69,7 @@ on the set $\set{1,2,3,4}$ is
 
 ### 9.5.2 Equivalence Relations
 
-#### Definition - Equivalence Relation
+#### Definition: Equivalence Relation
 
 A relation on a set $A$ is called an equivalence relation if it is **reflexive, symmetric, and transitive**.
 
@@ -101,7 +101,7 @@ $$
 
 By definition we have $a \equiv c \pmod{m}$, therefore congruence modulo $m$ is **transitive**. Therefore congruence modulo $m$ is an equivalence relation.
 
-#### Definition - Equivalent
+#### Definition: Equivalent
 
 Two elements $a$ and $b$ that are related by an equivalence relation are called **equivalent**. The notation $a \sim b$  is used to denote $a$ and $b$ are equivalent elements with respect to a particular equivalence relation.
 
@@ -148,6 +148,18 @@ Let $[a] = [b]$. Since $R$ is reflexive, then $a \in [a]$ and therefore $[a]$ is
 $\text{(iii)} \implies \text{(i)}$:
 
 Let $[a] \cap [b] \ne \emptyset$. Then there exists an element $c$ such that $c \in [a]$ and $c \in [b]$. By definition, we have $aRc$ and $bRc$. Since $R$ is symmetric, we have $cRb$. Furthermore, since $R$ is transitive and $aRc, cRb$, it follows that $aRb$.
+
+#### Partition of a Set
+
+A **partition** of a set $S$ is a collection of disjoint nonempty subsets of $S$ that have $S$ as their union. In other words, the collection of subsets $A_{i}, i \in I$ forms a partition $S$ if and only if
+
+$$
+\begin{align}
+A_{i} \ne \emptyset \text{ for } i &\in I, \\
+A_{i} \cap A_{j} \ne \emptyset \text{ when } i &\ne j, \\
+\bigcup_{i \in I} A_{i} &= S.
+\end{align}
+$$
 
 #### Theorem 2
 
