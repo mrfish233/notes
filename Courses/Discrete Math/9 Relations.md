@@ -59,8 +59,8 @@ on the set $\set{1,2,3,4}$ is
 \usepackage{tikz-cd}
 \begin{document}
 \begin{tikzcd}
-A \arrow[rd] \arrow[r, "\phi"] & B \\
-& C
+1 \arrow[r] \arrow[dr] & 3 \\
+2 \arrow[ur] \arrow[r] & 4
 \end{tikzcd}
 \end{document}
 ```

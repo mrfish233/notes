@@ -219,4 +219,60 @@ Suppose that $f: A \to B$,
 3. To show that $f$ is *surjective*, consider an arbitrary element $y \in B$ and find an element $x \in A$ such that $f(x) = y$.
 4. To show that $f$ is *not surjective*, find a particular $y \in B$ such that $f(x) \ne y$ for all $x \in A$.
 
+### 2.3.3 Inverse Functions and Compositions of Functions
 
+#### Definition: Inverse Function
+
+Let $f$ be a one-to-one correspondence from the set $A$ to the set $B$. The **inverse function** of $f$ is the function that assigns to an element $b$ belonging to $B$ the unique element $a$ in $A$ such that $f(a) = b$.
+
+The inverse function of $f$ is denoted by $f^{-1}$, hence $f^{-1}(b) = a$ when $f(a) = b$.
+
+#### Definition: Composition
+
+Let $g$ be a function from the set $A$ to the set $B$ and let $f$ be a function from the set $B$ to the set $C$. The **composition** of the functions $f$ and $g$, denoted for all $a \in A$ by $f \circ g$, is the function from $A$ to $C$ defined by
+
+$$
+(f \circ g)(a) = f(g(a)).
+$$
+
+### 2.3.4 The Graphs of Functions
+
+#### Definition: Graph of Function
+
+Let $f$ be a function from the set $A$ to the set $B$. The **graph** of the function $f$ is the set of ordered pairs
+
+$$
+\set{(a,b) \mid a \in A \text{ and } f(a) = b}.
+$$
+
+## 2.5 Cardinality of Sets
+
+### 2.5.1 Introduction
+
+#### Definition: Cardinality
+
+The sets $A$ and $B$ have the same **cardinality** if and only if there is a one-to-one correspondence from $A$ to $B$. When $A$ and $B$ have the same cardinality, we write $|A| = |B|$.
+
+If the cardinality of $A$ is less that or the same as the cardinality of $B$ we write $|A| \le |B|$.
+
+### 2.5.2 Countable Sets
+
+#### Definition: Countable
+
+A set that is either finite or has the same cardinality as the set of positive integers is called **countable**. A set that is not countable is called *uncountable*. When an *infinite set* $S$ is countable, we denote the cardinality of $S$ by $\aleph_{0}$. We write
+
+$$
+|S| = \aleph_{0}
+$$
+
+and say that $S$ has cardinality "aleph null".
+
+### 2.5.3 An Uncountable Set
+
+#### Theorem 1
+
+If $A$ and $B$ are countable sets, then $A \cup B$ is also countable.
+
+#### Theorem 2: Schröder-Bernstein Theorem
+
+If $A$ and $B$ are sets with $|A| \le |B|$ and $|B| \le |A|$, then $|A| = |B|$.

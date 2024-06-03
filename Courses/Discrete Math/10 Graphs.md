@@ -193,10 +193,24 @@ $$
 
 Below is an example of incidence matrix.
 
-![[Pasted image 20240531104428.png]]
+![[incidence-matrix.png]]
 
 ### 10.3.5 Isomorphism of Graphs
 
 #### Definition: Isomorphic
 
 The simple graphs $G_{1} = (V_{1}, E_{1})$ and $G_{2} = (V_{2}, E_{2})$ are **isomorphic** if there exists a one-to-one and onto function $f$ from $V_{1}$ to $V_{2}$ with the property that $a$ and $b$ are adjacent in $G_{1}$ if and only if $f(a)$ and $f(b)$ are adjacent in $G_{2}$, for all $a$ and $b$ in $V_{1}$.
+
+![[isomorphism.png]]
+
+## 10.4 Connectivity
+
+### 10.4.2 Paths
+
+#### Definition: Path
+
+Let $n$ be a nonnegative integer and $G$ an undirected graph. A **path** of length $n$ from $u$ to $v$ in $G$ is a sequence of edges $e_{1}, e_{2}, \cdots, e_{n}$ for which there exists a sequence $x_{0} = u, x_{1}, x_{2}, \cdots, x_{n} = v$ of vertices such that $e_{i}$, for $i \in [n]$, has endpoints $x_{i-1}$ and $x_{i}$.
+
+If $G$ is simple, then the path can be denoted by the vertex sequence $x_{0}, x_{1}, \cdots, x_{n}$.
+z
+// 施工中
