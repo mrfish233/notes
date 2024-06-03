@@ -16,10 +16,10 @@ A **relation on a set** $A$ is a relation from $A$ to $A$, or a subset of $A \ti
 
 ### 9.1.4 Properties of Relations
 
-- **Reflexive**: for $a \in A, (a,a) \in R$.
-- **Symmetric**: for $a, b \in A, (a,b) \in R \implies (b,a) \in R$.
-- **Antisymmetric**: for $a, b \in A, (a,b) \in R \implies (b,a) \notin R$.
-- **Transitive**: for $a,b,c \in A, (a,b) \in R \land (b,c) \in R \implies (a,c) \in R$.
+- **Reflexive**: $\forall a \in A, (a,a) \in R$.
+- **Symmetric**: $\forall a \forall  b \in A, (a,b) \in R \implies (b,a) \in R$.
+- **Antisymmetric**: $\forall a \forall b \in A, (a,b) \in R \implies (b,a) \notin R$.
+- **Transitive**: $\forall a \forall b \forall c \in A, (a,b) \in R \land (b,c) \in R \implies (a,c) \in R$.
 
 ### 9.1.5 Combining Relations
 
