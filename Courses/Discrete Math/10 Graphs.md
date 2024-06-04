@@ -12,6 +12,10 @@ A graph with an infinite vertex set or an infinite number of edges is called an 
 
 A **directed graph** (or digraph) $(V, E)$ consists of a nonempty set of vertices $V$ and a set of **directed edges** (or arcs) $E$. Each directed edge is associated with an ordered pair of vertices. The directed edge associated with the ordered pair $(u,v)$ is said *start at $u$ and end at $v$*.
 
+#### Simple Graph
+
+A graph in which each edge connects two different vertices and where no two edges connect the same pair of vertices is called **simple graph**.
+
 ## 10.2 Graph Terminology
 
 ### 10.2.2 Basic Terminology
