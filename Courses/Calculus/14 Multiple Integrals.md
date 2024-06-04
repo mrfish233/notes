@@ -182,8 +182,8 @@ $$
 
 $$
 \begin{align}
-r &= \rho \sin \theta \\
-z &= \rho \cos \theta \\
+r &= \rho \sin \phi \\
+z &= \rho \cos \phi \\
 \theta &= \theta
 \end{align}
 $$
