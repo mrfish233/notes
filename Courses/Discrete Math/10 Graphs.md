@@ -16,7 +16,7 @@ A **directed graph** (or digraph) $(V, E)$ consists of a nonempty set of vertice
 
 ### 10.2.2 Basic Terminology
 
-#### Definition: Adjacent
+#### Definition: Adjacent (Undirected Graph)
 
 Two vertices $u$ and $v$ in an undirected graph $G$ are called **adjacent** (or neighbors) in $G$ if $u$ and $v$ are endpoints of an edge $e$ of $G$. Such an edge $e$ is called *incident with* the vertices $u$ and $v$ and $e$ is said to *connect* $u$ and $v$.
 
@@ -58,7 +58,7 @@ $$
 
 Since $\deg(v)$ is even for $v \in V_{1}$, then $2m - \sum\limits_{v \in V_{1}} \deg(v)$ is even. And all the terms in $\sum\limits_{v \in V_{2}} \deg(v)$ are odd, there must be an even number of terms. Thus there are an even number of vertices of odd degree.
 
-#### Definition: Adjacent
+#### Definition: Adjacent (Directed Graph)
 
 When $(u,v)$ is an edge of the graph $G$ with *directed edges*, $u$ is said to be **adjacent to** $v$ and $v$ is said to be **adjacent from** $u$.
 
@@ -78,11 +78,11 @@ $$
 
 ### 10.2.3 Special Simple Graphs
 
-#### Path
+#### Paths
 
 A **path** on $n$ vertices, denoted by $P_{n}$, is a simple graph consisting of $n$ vertices which can be labeled by $v_{1}, v_{2}, \cdots, v_{n}$ such that two vertices $v_{i}, v_{j}$ are adjacent if $|i-j| = 1$.
 
-#### Cycle
+#### Cycles
 
 A **cycle** on $n$ vertices, denoted by $P_{n}$, is a simple graph consisting of $n$ vertices which can be labeled by $v_{1}, v_{2}, \cdots, v_{n}$ such that two vertices $v_{i}, v_{j}$ are adjacent if $|i-j| = 1$ or $n-1$.
 
@@ -134,7 +134,9 @@ The bipartite graph $G = (V,E)$ with bipartition $(V_{1}, V_{2})$ has a complete
 
 **Proof:**
 
-*(Forward proof):* Suppose that there is a complete matching $M$ from $V_{1}$ to $V_{2}$. If $A \subseteq V_{1}$, for every vertex $v \in A$, there is an edge connecting $v$ to a vertex in $V_{2}$.
+*(Forward proof):* Suppose that there is a complete matching $M$ from $V_{1}$ to $V_{2}$. If $A \subseteq V_{1}$, for every vertex $v \in A$, there is an edge connecting $v$ to a vertex in $V_{2}$. Then there are at least as many vertices in $V_{2}$ that are neighbors of vertices in $V_{1}$ as there are vertices in $V_{1}$. It follows that $|N(A)| \ge |A|$.
+
+
 
 ### 10.2.7 New Graphs from Old
 
