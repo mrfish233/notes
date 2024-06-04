@@ -262,7 +262,7 @@ Let $(S, \preccurlyeq)$ be a finite poset, then the size of a *maximum antichain
 &
 \\
 {\{a, c\}} \arrow[d, no head, dashed] \arrow[rd, no head]
-& {\{a, b\}} \arrow[ld, no head] \arrow[rd, no head]
+& {\{a, b\}} \arrow[ld, no head] \arrow[rd, Rightarrow, no head]
 & {\{b, c\}} \arrow[d, no head] \arrow[ld, no head, dotted]
 \\
 \{a\} \arrow[rd, no head]
@@ -278,3 +278,46 @@ Let $(S, \preccurlyeq)$ be a finite poset, then the size of a *maximum antichain
 ### 9.6.4 Maximal and Minimal Elements
 
 An element $a$ is **maximal** in the post $(S, \preccurlyeq)$ if there is no $b \in S$ such that $a \prec b$. Similarly, an element $c$ is **minimal** if there is no $d \in S$ such that $d \prec c$.
+
+### 9.6.5 Lattices
+
+A partially ordered set in which every pair of elements has both a least upper bound and a greatest lower bound is called a **lattice**.
+
+The diagram below is a lattice.
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& 6 & 
+\\
+& 5 \arrow[u, no head] &
+\\
+3 \arrow[ru, no head] & & 4 \arrow[lu, no head]
+\\
+& 2 \arrow[lu, no head] \arrow[ru, no head] &
+\\
+& 1 \arrow[u, no head] &
+\end{tikzcd}
+\end{document}
+```
+
+Meanwhile, the diagram below is not a lattice, since ${2}, {3}$ have no least upper bound.
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& 6
+\\
+4 \arrow[ru, no head]
+& 5 \arrow[u, no head]
+\\
+2 \arrow[u, no head] \arrow[ru, no head]
+& 3 \arrow[u, no head] \arrow[lu, no head]
+\\
+1 \arrow[ru, no head] \arrow[u, no head]
+&                                         
+\end{tikzcd}
+\end{document}
+```
