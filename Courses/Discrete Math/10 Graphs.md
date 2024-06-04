@@ -140,8 +140,6 @@ The bipartite graph $G = (V,E)$ with bipartition $(V_{1}, V_{2})$ has a complete
 
 *(Forward proof):* Suppose that there is a complete matching $M$ from $V_{1}$ to $V_{2}$. If $A \subseteq V_{1}$, for every vertex $v \in A$, there is an edge connecting $v$ to a vertex in $V_{2}$. Then there are at least as many vertices in $V_{2}$ that are neighbors of vertices in $V_{1}$ as there are vertices in $V_{1}$. It follows that $|N(A)| \ge |A|$.
 
-
-
 ### 10.2.7 New Graphs from Old
 
 #### Definition: Subgraph
