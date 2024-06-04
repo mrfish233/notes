@@ -41,6 +41,29 @@ The relation $R$ on a set $A$ is **transitive** if and only if $R^{n} \subseteq 
 
 ## 9.3 Representing Relations
 
+### 9.3.2 Representing Relations Using Matrices
+
+Suppose that $R$ is a relation from $A = \set{a_{1}, a_{2}, \cdots, a_{m}}$ to $B = \set{b_{1}, b_{2}, \cdots, b_{n}}$. The relation $R$ can be represented by the matrix $\mathbf{M}_{R} = [m_{ij}]$, where
+
+$$
+m_{ij} =
+\begin{cases}
+1 \text{ if } (a_{i}, b_{j}) \in R,  \\
+0 \text{ if } (a_{i}, b_{j}) \notin R.
+\end{cases}
+$$
+
+**Example:** If $R = \set{(2,1), (3,1), (3,2)}$, the matrix for $R$ is
+
+$$
+\mathbf{M}_{R} =
+\begin{bmatrix}
+0 & 0 \\
+1 & 0 \\
+1 & 1
+\end{bmatrix}.
+$$
+
 ### 9.3.3 Representing Relations Using Digraphs
 
 #### Definition: Digraph
@@ -207,27 +230,51 @@ Many edges in the digraph for a finite poset do not have to be shown as they mus
 
 **Example:** $A = \set{a, b, c}$ and $R$: the "subset" relation on $2^A$, the power set of $A$. The Hasse's diagram of $(A, R)$ is
 
-```mermaid
-%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
-flowchart TD
-0([a, b, c])
-1([a, b])
-2([b, c])
-3([a, c])
-4([a])
-5([b])
-6([c])
-7([∅])
-
-0 --- 1 & 2 & 3
-3 --- 4 & 6
-1 --- 4 & 5
-2 --- 5 & 6
-4 --- 7
-6 --- 7
-5 --- 7
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& {\{a, b, c\}} \arrow[d, no head] \arrow[rd, no head] \arrow[ld, no head]
+& 
+\\
+{\{a, c\}} \arrow[d, no head] \arrow[rd, no head] 
+& {\{a, b\}} \arrow[ld, no head] \arrow[rd, no head]
+& {\{b, c\}} \arrow[d, no head] \arrow[ld, no head]
+\\
+\{a\} \arrow[rd, no head]
+& \{c\} \arrow[d, no head]
+& \{b\} \arrow[ld, no head]
+\\
+& \emptyset 
+\end{tikzcd}
+\end{document}
 ```
 
 #### Theorem 1: Dilworth's Theorem
 
 Let $(S, \preccurlyeq)$ be a finite poset, then the size of a *maximum antichain* is equal to the minimum number of *chains* that form a partition of $S$.
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& {\{a, b, c\}} \arrow[d, no head] \arrow[rd, no head] \arrow[ld, no head, dashed]
+&
+\\
+{\{a, c\}} \arrow[d, no head, dashed] \arrow[rd, no head]
+& {\{a, b\}} \arrow[ld, no head] \arrow[rd, no head]
+& {\{b, c\}} \arrow[d, no head] \arrow[ld, no head, dotted]
+\\
+\{a\} \arrow[rd, no head]
+& \{c\} \arrow[d, no head, dotted]
+& \{b\} \arrow[ld, no head]
+\\
+& \emptyset                                                              
+&
+\end{tikzcd}
+\end{document}
+```
+
+### 9.6.4 Maximal and Minimal Elements
+
+An element $a$ is **maximal** in the post $(S, \preccurlyeq)$ if there is no $b \in S$ such that $a \prec b$. Similarly, an element $c$ is **minimal** if there is no $d \in S$ such that $d \prec c$.
