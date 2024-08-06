@@ -17,3 +17,13 @@ sub: subscribe
 
 1. Each message will be delivered to all who subscribed to the corresponding topic (example: MQTT)
 2. Each message will be delivered to only one of the corresponding subscribers (example: MSQ)
+
+## MQTT Protocol
+
+Implementation for MQTT clients
+- https://github.com/mqtt/mqtt.org/wiki/libraries
+- https://pypi.org/project/paho-mqtt/
+
+### Terminology
+
+
